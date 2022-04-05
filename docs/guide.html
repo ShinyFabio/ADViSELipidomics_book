@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 4 Guide | ADViSELipidomics user manual</title>
+<meta name="author" content="Fabio Della Rocca">
+<meta name="description" content="ADViSELipidomics has a graphical user interface (GUI) implemented using the shiny and golem R packages. It has five main sections: Home, Data Import &amp; Preprocessing, SumExp Visualization,...">
+<meta name="generator" content="bookdown 0.25 with bs4_book()">
+<meta property="og:title" content="Chapter 4 Guide | ADViSELipidomics user manual">
+<meta property="og:type" content="book">
+<meta property="og:url" content="your book url like https://shinyfabio.github.io/ADViSELipidomics_book/guide.html">
+<meta property="og:description" content="ADViSELipidomics has a graphical user interface (GUI) implemented using the shiny and golem R packages. It has five main sections: Home, Data Import &amp; Preprocessing, SumExp Visualization,...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 4 Guide | ADViSELipidomics user manual">
+<meta name="twitter:description" content="ADViSELipidomics has a graphical user interface (GUI) implemented using the shiny and golem R packages. It has five main sections: Home, Data Import &amp; Preprocessing, SumExp Visualization,...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">ADViSELipidomics user manual</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> About</a></li>
+<li><a class="" href="install.html"><span class="header-section-number">2</span> Install</a></li>
+<li><a class="" href="inputdata.html"><span class="header-section-number">3</span> Input Data</a></li>
+<li><a class="active" href="guide.html"><span class="header-section-number">4</span> Guide</a></li>
+<li><a class="" href="filestudy.html"><span class="header-section-number">5</span> Files Case Study #1</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="guide" class="section level1" number="4">
+<h1>
+<span class="header-section-number">4</span> Guide<a class="anchor" aria-label="anchor" href="#guide"><i class="fas fa-link"></i></a>
+</h1>
+<p>ADViSELipidomics has a graphical user interface (GUI) implemented using the shiny and golem R packages. It has five main sections: Home, Data Import &amp; Preprocessing, SumExp Visualization, Exploratory Analysis, and Statistical Analysis. Each section is accessible from a sidemenu on the left.</p>
+<div id="sec31" class="section level2" number="4.1">
+<h2>
+<span class="header-section-number">4.1</span> Home section<a class="anchor" aria-label="anchor" href="#sec31"><i class="fas fa-link"></i></a>
+</h2>
+<p>The Home section includes general information about ADViSELipidomics like the citation, the link to the GitHub page, and the link to this manual. From the “Start!” button it is possible to go to the following section where the user can upload the lipidomic data.</p>
+</div>
+<div id="sec32" class="section level2" number="4.2">
+<h2>
+<span class="header-section-number">4.2</span> Data Import &amp; Preprocessing<a class="anchor" aria-label="anchor" href="#sec32"><i class="fas fa-link"></i></a>
+</h2>
+<p>This section allows to import and process lipidomic data from various sources.
+When you open this section for the first time after launch, a message box appears and asks you to write your name and your company. This information will be stored in the final output of ADViSELipidomics. By default, if you click on “Run”, the User will be <em>“Name”</em> and the Company will be <em>“Company”</em>.
+The picture below shows the Data Import &amp; Preprocessing section (with the different parts enlightened with red rectangles).</p>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/78078351/159950379-e3885176-0ccc-4bf1-b1eb-9f4378d468e2.png" alt=""><p class="caption">workflow_withbox</p>
+</div>
+<ul>
+<li>
+<strong>Rectangle A</strong> allows the user to choose between LipidSearch, LIQUID, Excel files, Summarized Experiment, and Metabolomics Workbench. Moreover, it is also possible to select between experiments with or without internal standards (this option is available only for LipidSearch import).</li>
+<li>
+<strong>Rectangle B</strong> shows three different steps for Importing &amp; Filtering: importing data, storing and reading data, filtering data.</li>
+<li>
+<strong>Rectangle C</strong> shows five additional steps for Calibration: importing calibration files, storing calibration files, selecting the folder for the results, selecting calibration options, application of recovery.</li>
+<li>
+<strong>Rectangle D</strong> shows two different steps for Filtering and Missing Data imputation and creating the SummarizedExperiment object. Note that the layout of the Data Import &amp; Preprocessing section and the required files depends on the type of input data format that the user chooses. Go to Chapter <a href="inputdata.html#inputdata">3</a> if you need help gathering all the required files.</li>
+</ul>
+<p>Since the option LipidSearch output with Internal Standard (IS) has the largest number of required files and steps, here we provide a complete guide for this case. Anyway, this guide applies also to LipidSearch without IS and to LIQUID: in these cases, the only difference is that there isn’t the CALIBRATION module (Section <a href="guide.html#sec322">4.2.2</a>).</p>
+<div id="sec321" class="section level3" number="4.2.1">
+<h3>
+<span class="header-section-number">4.2.1</span> LipidSearch (IS) EXAMPLE - IMPORTING &amp; FILTERING module<a class="anchor" aria-label="anchor" href="#sec321"><i class="fas fa-link"></i></a>
+</h3>
+<p>The first module is the IMPORTING &amp; FILTERING module where the user can upload the Target File, the Internal Reference File, and the Data files that come from LipidSearch.</p>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/78078351/160102565-67eadec1-8df0-40bb-91ab-7decb085ad26.png" alt=""><p class="caption">IMPORTING &amp; FILTERING module</p>
+</div>
+<ul>
+<li>
+<strong>Step 1.</strong> The first files that you have to import are the Target File and the Internal Reference File (Rectangle A, steps 1 and 2). Next to each of them, there is a button (yellow squared rectangle) that allows you to edit the Excel files. You can select only the columns that you need, filter the rows by one or more conditions and download the edited data. If you need to edit them, to apply the editing you have to enable the button next to the download button and click on the “Done” button (right top corner). Anyway, a help button guides you through the editing options.</li>
+<li>
+<strong>Step 2.</strong> Here you choose the folder containing the data files coming from LipidSearch (only the data files related to the samples and NOT to the IS). After selecting the folder, click on the “Read Data” button and ADViSELipidomics will start to read all the data files. A progress bar shows the percentage of completion. When the reading process is completed, you can perform a quality check on the area of each sample by clicking the “Quality check” button.</li>
+<li>
+<strong>Step 3.</strong> Finally, here you can filter non-informative lipids based on retention time in the range, number of carbon atoms in the range, even number of carbon atoms, number of double bonds in the range, duplicated lipids. From the two sliders, you can choose the range for the carbon number and the double bound number, while the other filters come from the Internal Reference File. If there are duplicated lipids (same m/z values for lipid peaks), ADViSELipidomics takes only the lipids with the maximum peak area. The “Filter Data” button starts this process. In the end, you can check the filtered data for each sample.</li>
+</ul>
+</div>
+<div id="sec322" class="section level3" number="4.2.2">
+<h3>
+<span class="header-section-number">4.2.2</span> LipidSearch (IS) EXAMPLE - CALIBRATION module<a class="anchor" aria-label="anchor" href="#sec322"><i class="fas fa-link"></i></a>
+</h3>
+<p>If the previous module is completed, the CALIBRATION module appears next to it. The Calibration module creates the calibration curves and the calibration matrix. It uses the Internal Lipid Standards reported in the Internal Reference file, and the correspondence between the Concentration Files and the lipid classes declared in the Calibration File. This module extracts the relationships between peaks area and concentration values for each internal lipid standard, constructing the calibration curves with a linear model and plotting them. The linear regression model can be classical or robust, with zero or non-zero intercept. Finally, the calibration matrix resumes all the points from the calibration curves. After the calibration process, ADViSELipidomics stores slope and intercept values for the recovery module.
+As already stated, this module appears only if you are using LipidSearch output with Internal Standard (and you clicked on “Yes” in the radiobutton that asks you <em>“Do you have internal standards?”</em>). In this module, you need two Calibration Files (.xlsx, see Section <a href="inputdata.html#sec24">3.4</a>) and the Concentration files coming from LipidSearch related to the internal standard (.txt, see Section <a href="inputdata.html#sec21">3.1</a>).</p>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/78078351/159966937-26f75ea8-5ac0-405c-a92b-019f868d06c5.png" alt=""><p class="caption">CALIBRATION module</p>
+</div>
+<ul>
+<li>
+<strong>Step. 1</strong> Here you can upload the Calibration Files (.xlsx) for both Deuterated and Nonlabeled. This step is very similar to Step 1 of the IMPORTING &amp; FILTERING module. You can find further information about these files in Section <a href="inputdata.html#sec24">3.4</a>.</li>
+<li>
+<strong>Step. 2</strong> Select the folder containing the Concentration files coming from LipidSearch and then click on “Read the concentration files”. Also, this step is very similar to step 2 of the previous module.</li>
+<li>
+<strong>Step. 3</strong> Here you can select the folder where saving the output from LipidSearch. ADViSELipidomics creates for you the folder structure.</li>
+<li>
+<strong>Step. 4</strong> In this step you can choose some calibration options and visualize the calibration plot for each standard.</li>
+<li>
+<strong>Step. 5.</strong> Finally, you can apply the recovery percentage to the concentration values for each lipid, considering the Internal Lipid Standards as lipid class reference. This normalization provides absolute concentration values for the lipids and the resulting concentration matrix can be seen by clicking on the “Check concentration matrix” button. Here it’s possible also to visualize the missing values(if applicable). Moreover, from the “Download LOL” button you can download a table containing all the lipids filtered because outside of the linearity range.</li>
+</ul>
+</div>
+<div id="sec323" class="section level3" number="4.2.3">
+<h3>
+<span class="header-section-number">4.2.3</span> LipidSearch (IS) EXAMPLE - MISSING DATA &amp; SUMMARIZED EXPERIMENT<a class="anchor" aria-label="anchor" href="#sec323"><i class="fas fa-link"></i></a>
+</h3>
+<p>This is the last module of the preprocessing menu where you can filter and impute missing values (NAs), build the SummarizedExperiment object, and download it.</p>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/78078351/159970295-85bcb1fe-9fb1-4061-aa98-905c78933330.png" alt=""><p class="caption">MISSING DATA &amp; SUMMARIZED EXPERIMENT</p>
+</div>
+<ul>
+<li>
+<strong>Step 1.</strong> In the first step ADViSELipidomics computes the percentage of NAs, for each lipid (matrix rows) and each sample (matrix columns). Second, it allows retaining only lipids and/or samples with a percentage of missingness below thresholds chosen using the sliders. For example, if you set <em>Max missing data percentage allowable on lipids</em> to 0.3 <em>Max missing data percentage allowable on samples</em> to 0.6 that means that only lipids (rows) with less than 30% of NAs and samples (columns) with less than 60% of NAs are stored. After that, by clicking on the “Check filtered NAs” button, ADViSELipidomics provides the missing data distributions and the data dimension before and after filtering NAs.</li>
+<li>
+<strong>Step 2.</strong> Next you can impute the remaining NAs with different imputation methods, three Not Model-Based (mean, median, and knn) and one Model-Based (irmi).</li>
+<li>
+<strong>Step 3.</strong> In the final step ADViSELipidomics build the SummarizedExperiment object and download it. By clicking on the “See the results” you will be redirected to the next menu, SumExp Visualization.</li>
+</ul>
+</div>
+</div>
+<div id="sec33" class="section level2" number="4.3">
+<h2>
+<span class="header-section-number">4.3</span> SumExp Visualization<a class="anchor" aria-label="anchor" href="#sec33"><i class="fas fa-link"></i></a>
+</h2>
+<p>Once you ended successfully the Preprocessing module, the first thing that you can do is check the just created SummarizedExperiment (SE) object. It can be done in the SumExp Visualization menu. The complex structure of the SE object can be investigated by a red gear icon where you can choose what part of the SE object should be shown and summarise the data (if you have technical replicates).</p>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/78078351/159973518-6b7fc106-020a-4185-8595-ff611671868d.png" alt=""><p class="caption">SumExp Visualization</p>
+</div>
+<p>In the picture above, it is shown the rowData part of the SE object containing the annotation on lipids. Each lipid in the “Lipids” contains a hyperlink to the SwissLipids online repository to provide structural, biological, and analytic details.</p>
+</div>
+<div id="sec34" class="section level2" number="4.4">
+<h2>
+<span class="header-section-number">4.4</span> Exploratory Analysis<a class="anchor" aria-label="anchor" href="#sec34"><i class="fas fa-link"></i></a>
+</h2>
+<p>The Exploratory Analysis menu includes three sub-menus: Plots, Clustering, and Dimensionality Reduction.</p>
+<div id="sec341" class="section level3" number="4.4.1">
+<h3>
+<span class="header-section-number">4.4.1</span> Plots<a class="anchor" aria-label="anchor" href="#sec341"><i class="fas fa-link"></i></a>
+</h3>
+<p>This sub-menu allows the user to create different types of plots to show the trend and behavior of data, exploring them from lipid and/or sample points of view. It has 4 panels: Lipids, Scatterplot, Heatmap, and Quality plots.</p>
+<ul>
+<li>
+<strong>Lipid plots.</strong> It is possible to 1) represent the lipid class distribution (counts of lipids per class) with a pie chart, boxplot, and spider plot; 2) visualize the percentage proportion of lipid class for each sample using a barplot, 3) compare the lipid species abundance for each condition; 4) inspect the abundance of a lipid, selected by the user, in relationship with a feature from the target file (e.g., treatment) using boxplots;</li>
+<li>
+<strong>Scatterplots.</strong> It is possible to visualize the relationship between lipid abundance in two samples;</li>
+<li>
+<strong>Heatmap.</strong> It provides a highly customizable heatmap to show possible clusters among lipids or samples. The user can select many parameters: a) row annotation with the feature from the target file, b) column annotation with the information from lipids parsing, c) dendrograms for lipids and/or samples, d) distance function (Euclidean, maximum, Canberra), e) clustering method (complete, average, median, Ward); f) number of clusters for lipids and/or samples. The user can select an area in the overall heatmap and have a detailed zoom of the area itself, with associated information;</li>
+<li>
+<strong>Quality plots.</strong> It provides different typologies of plots (barplot, boxplot, density plot) to show the total amount of abundance (logarithmic scale) per sample, considering as reference a feature from the target file, to show possible unexpected behavior among samples or replicates for the same sample.</li>
+</ul>
+<div class="inline-figure">The picture below shows an example of the Lipid class proportion plot.
+<img src="https://user-images.githubusercontent.com/78078351/159976950-0e3220d2-dc21-40a2-a2a6-4256b30a5d14.png" alt="Lipid class proportion">
+</div>
+</div>
+<div id="sec342" class="section level3" number="4.4.2">
+<h3>
+<span class="header-section-number">4.4.2</span> Clustering<a class="anchor" aria-label="anchor" href="#sec342"><i class="fas fa-link"></i></a>
+</h3>
+<p>The Clustering sub-menu allows the user to cluster the data by lipids or samples. The user can choose the number of clusters and the clustering method among the following algorithms: hierarchical clustering (using single, complete, Ward as linkage function) or partitioning clustering (k-means, PAM, Clara). If you choose a partitioning clustering, ADViSELipidomics performs first a PCA. Additional plots, such as the silhouette plot, can suggest the number of clusters to use.</p>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/78078351/159980474-1cc6dbe4-e745-44d5-87ce-72f636454d2a.png" alt=""><p class="caption">Clustering</p>
+</div>
+</div>
+<div id="sec343" class="section level3" number="4.4.3">
+<h3>
+<span class="header-section-number">4.4.3</span> Dimensionality Reduction<a class="anchor" aria-label="anchor" href="#sec343"><i class="fas fa-link"></i></a>
+</h3>
+<p>The Dimensionality Reduction sub-menu allows the user to choose between unsupervised (PCA) and supervised approaches (PLS-DA, sPLS-DA) to represent the data in a two or three-dimensional space. It contains three panels PCA, PLS-DA, and sPLS-DA.</p>
+<ul>
+<li>
+<strong>PCA.</strong> ADViSELipidomics computes the Principal Component Analysis (PCA), showing the results with different plots: a) 2D plot, b) biplot, c) scree plot, d) loadings plot, e) 3D plot. The user can highlight the features from the target file with different colors and select the number of components to use for the loading plots.</li>
+<li>
+<strong>PLS-DA.</strong> ADViSELipidomics computes the Partial Least Square - Discriminant Analysis, showing the results with a 2D plot and a Correlation Circle plot. The user can select the group variable and the number of components for the computation. The 2D plot can be customized from the red gear icon. Furthermore, ADViSELipidomics can perform a Cross-Validation to identify the best number of components. It may take a while.</li>
+<li>
+<strong>sPLS-DA.</strong> ADViSELipidomics can compute also the sparse version of the PLS-DA. The panel is very similar to the PLS-DA panel but since it’s a sparse version, it is possible to choose the number of variables to select on each component (called “KeepX”). Also here ADViSELipidomics can perform a Cross-Validation that helps the user to choose the best number of components and the best “KeepX”.</li>
+</ul>
+<div class="inline-figure">Here’s an example of a 2D plot for the PCA.
+<img src="https://user-images.githubusercontent.com/78078351/159980009-d4aa02bc-87a0-4bb0-a5af-8cc8f4df0171.png" alt="PCA">
+</div>
+</div>
+</div>
+<div id="sec35" class="section level2" number="4.5">
+<h2>
+<span class="header-section-number">4.5</span> Statistical Analysis<a class="anchor" aria-label="anchor" href="#sec35"><i class="fas fa-link"></i></a>
+</h2>
+<p>The Statistical Analysis menu includes two sub-menus: Differential Analysis and Enrichment Analysis.</p>
+<div id="sec351" class="section level3" number="4.5.1">
+<h3>
+<span class="header-section-number">4.5.1</span> Differential Analysis<a class="anchor" aria-label="anchor" href="#sec351"><i class="fas fa-link"></i></a>
+</h3>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/78078351/159989613-5ee22334-3777-4bda-a2b0-5e33c8cbf26e.png" alt=""><p class="caption">DA</p>
+</div>
+<p>The Differential Analysis sub-menu applies statistical algorithms to identify lipids with a different abundance among samples associated with experimental conditions (i.e., treatment versus control). It has two panels: <strong>Build DA</strong> and <strong>Comparisons</strong>. The first allows the user to build and run the differential analysis, while the second shows the “differential expressed” lipids with a Venn Diagram and an Upset plot.</p>
+<p>The picture below shows the first panel, <strong>Buil DA</strong> with the different parts enlightened in red rectangles.</p>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/78078351/160097413-8f0bee68-75ae-45d5-b64d-b65c3d35c1be.png" alt=""><p class="caption">DA_box</p>
+</div>
+<ul>
+<li>
+<strong>Rectangle A.</strong> Here you can select between one of the two SE objects obtained from the previous steps (i.e., the one with the lipid abundance of all samples or where the technical replicates are averaged). It is possible to normalize the data matrix by a scaling factor at this stage (“Normalization between replicates or samples”). Moreover, when a data matrix has technical replicates, you can also incorporate the replicate effect in the model by checking the “Replicates effect” box.</li>
+<li>
+<strong>Rectangle B.</strong> Here you can build your experimental designs. An ADViSELipidomics complex design can include up to two experimental conditions and at most two variables to consider as batch effects. First, you can select a primary variable and, with the plus button, you can add a second variable. Next, you can decide to consider the batch effect by choosing up to two batch variables. More in detail, ADViSELipidomics copes with the batch effects by either fitting the model with the batch variables or removing the batch effect before fitting the model. To handle the batch effect, ADViSELipidomics uses the removeBatchEffect function from the limma package or the ComBat function (parametric or non-parametric method) from the SVA package. Finally, with the “Write contrasts” button it opens a box where you can generate the contrast list. This functionality works with up to two total variables (e.g. primary variable + secondary variable (“Batch type” set to “remove”), or primary variable + primary batch variable with “Batch type” set to “fit”).</li>
+<li>
+<strong>Rectangle C.</strong> Here you can select a threshold for the adjusted p-values and a method for the <em>decideTests</em> function (limma package) used to identify “differentially expressed” lipids. Finally, click on the “Run DA” button to run the differential analysis. You can also check and download a table of results (TopTable).</li>
+<li>
+<strong>Rectangle D.</strong> In this rectangle there are some plot options like the choice of the contrast, the threshold for the logFC, and the possibility to add another plot. There are two different plots: a volcano plot and a MA plot, both interactive where you can change the fill variable and add labels to lipids of interest.</li>
+</ul>
+<p>After ADViSELipidomics performed the DA, you can go to the <strong>Comparisons</strong> panel to visualize the “differential expressed” lipids and perform pairwise comparisons between different contrasts using the Venn diagram and the Upset plot. Finally, it reports the list of common lipids in tabular form. These two plots are available only with at least two contrasts.</p>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/78078351/160099334-d1d587d3-3ab3-4f65-823f-c608ec731b30.png" alt=""><p class="caption">Venn</p>
+</div>
+</div>
+<div id="sec352" class="section level3" number="4.5.2">
+<h3>
+<span class="header-section-number">4.5.2</span> Enrichment Analysis<a class="anchor" aria-label="anchor" href="#sec352"><i class="fas fa-link"></i></a>
+</h3>
+<p>The Enrichment Analysis sub-menu allows for building different lipid sets from the chemical features of the lipids: i.e., lipid classes, total chain length (the sum of all carbon atoms in the tails), total unsaturation (the sum of all the double bonds in the tails). Then, after defining a ranking for the lipids (i.e., logarithmic Fold Change, p-value, adjusted p-value, or B statistic), it identifies enriched sets of lipids using a permutation test. To achieve a robust result, it was necessary to perform a few million permutations, hence this process may take a while.</p>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/78078351/160098797-fc3ec3a3-c53c-4808-b59d-d5f9dc960455.png" alt=""><p class="caption">Enrichment</p>
+</div>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="inputdata.html"><span class="header-section-number">3</span> Input Data</a></div>
+<div class="next"><a href="filestudy.html"><span class="header-section-number">5</span> Files Case Study #1</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#guide"><span class="header-section-number">4</span> Guide</a></li>
+<li><a class="nav-link" href="#sec31"><span class="header-section-number">4.1</span> Home section</a></li>
+<li>
+<a class="nav-link" href="#sec32"><span class="header-section-number">4.2</span> Data Import &amp; Preprocessing</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#sec321"><span class="header-section-number">4.2.1</span> LipidSearch (IS) EXAMPLE - IMPORTING &amp; FILTERING module</a></li>
+<li><a class="nav-link" href="#sec322"><span class="header-section-number">4.2.2</span> LipidSearch (IS) EXAMPLE - CALIBRATION module</a></li>
+<li><a class="nav-link" href="#sec323"><span class="header-section-number">4.2.3</span> LipidSearch (IS) EXAMPLE - MISSING DATA &amp; SUMMARIZED EXPERIMENT</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#sec33"><span class="header-section-number">4.3</span> SumExp Visualization</a></li>
+<li>
+<a class="nav-link" href="#sec34"><span class="header-section-number">4.4</span> Exploratory Analysis</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#sec341"><span class="header-section-number">4.4.1</span> Plots</a></li>
+<li><a class="nav-link" href="#sec342"><span class="header-section-number">4.4.2</span> Clustering</a></li>
+<li><a class="nav-link" href="#sec343"><span class="header-section-number">4.4.3</span> Dimensionality Reduction</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#sec35"><span class="header-section-number">4.5</span> Statistical Analysis</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#sec351"><span class="header-section-number">4.5.1</span> Differential Analysis</a></li>
+<li><a class="nav-link" href="#sec352"><span class="header-section-number">4.5.2</span> Enrichment Analysis</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/03-guide.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/03-guide.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2022-04-05.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
