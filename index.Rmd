@@ -19,7 +19,7 @@ This is the documentation of the ADViSELipidomics package. ADViSELipidomics is a
 
 If you use **ADViSELipidomics** in your publications, we appreciate if you can cite:
 
-E. Del Prete *et al.* (2022) ADViSELipidomics: a workflow for the analysis of lipidomics data DOI: ............
+E. Del Prete *et al.* (2022) ADViSELipidomics: a workflow for analyzing lipidomics data DOI: ............
 
 
 ```{r include=FALSE}
