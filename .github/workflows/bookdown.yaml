@@ -24,7 +24,7 @@ jobs:
       
       - name: Install packages missed by renv
         run: |
-          R -e 'install.packages("bookdown")
+          R -e 'install.packages("bookdown")'
 
       - name: Cache bookdown results
         uses: actions/cache@v2
