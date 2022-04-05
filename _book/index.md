@@ -1,14 +1,16 @@
 --- 
-title: "ADViSELipidomics user manual"
-author: "Fabio Della Rocca"
-date: "`r Sys.Date()`"
+title: "A Minimal Book Example"
+author: "John Doe"
+date: "2022-04-05"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is the user manual of ADViSELipidomics.
+  This is a minimal example of using the bookdown package to write a book.
+  The HTML output format for this example is bookdown::bs4_book,
+  set in the _output.yml file.
 biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
 ---
@@ -22,9 +24,4 @@ If you use **ADViSELipidomics** in your publications, we appreciate if you can c
 E. Del Prete *et al.* (2022) ADViSELipidomics: a workflow for the analysis of lipidomics data DOI: ............
 
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+
