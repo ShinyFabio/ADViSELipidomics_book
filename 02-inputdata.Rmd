@@ -53,8 +53,9 @@ The last two characters (e.g. "_1") refer to the technical replicate. If you don
 <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/circle-exclamation.svg" width="15" height="15"> **NOTE**  
 In the choice of your sample name, it's better to avoid special characters and **DO NOT use underscores (_)**. This character is used by ADViSELipidomics to split the file name into three parts: the sample name, the type of file (deuterated/nonlabeled or positive/negative), and the technical replicate as shown in the following picture:
 
-
-![datafile_names](https://user-images.githubusercontent.com/78078351/160425060-4c576fe4-f328-4024-88dc-838af935cf1f.png)
+```{r out.width='100%', echo=F}
+knitr::include_graphics("https://user-images.githubusercontent.com/78078351/160425060-4c576fe4-f328-4024-88dc-838af935cf1f.png")
+```
 
 
 For example, a bad name could be "Blood_bag_deuterated_1.txt", while a good name is "Blood-bag_deuterated_1.txt".
@@ -74,7 +75,12 @@ In the picture below there is a Target File example where the mandatory columns 
 <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/circle-exclamation.svg" width="15" height="15"> **NOTE**  
 If your Target File doesn't contain at least one informative column about the samples (e.g. Product, Model_type, etc.), you can't perform any exploratory or statistical analysis. 
 
-![target_file_image](https://user-images.githubusercontent.com/78078351/160630507-503a7b95-ce60-407b-bdf6-f3ae428f428b.png)
+
+```{r out.width='100%', echo=F}
+knitr::include_graphics("https://user-images.githubusercontent.com/78078351/160630507-503a7b95-ce60-407b-bdf6-f3ae428f428b.png")
+```
+
+
 
 The example target file can be downloaded from here:
 
@@ -96,7 +102,11 @@ In LipidSearch and LIQUID option, ADViSELipidomics requires also another Excel f
 
 The picture below shows an Internal Reference File example in the case of LipidSearch and the presence of Internal Standards. In yellow are the mandatory columns, and in green the columns needed only in the presence of Internal Standards. The "Unit_measure" column is not used but can be useful to check that each standard concentration has the same unit measure. If you have different units measure, convert them to the same.
 
-![Screenshot (223)](https://user-images.githubusercontent.com/78078351/160590351-652867af-a00f-434b-b0e2-67aa767c06c3.png)
+
+```{r out.width='100%', echo=F}
+knitr::include_graphics("https://user-images.githubusercontent.com/78078351/160590351-652867af-a00f-434b-b0e2-67aa767c06c3.png")
+```
+
 
 The Internal Reference File example for the LipidSearch with Internal Standards option can be downloaded from here:
 
@@ -112,7 +122,10 @@ The Internal Reference File example for the LipidSearch with Internal Standards 
 
 The picture below shows an Internal Reference File example in the case of LIQUID. In yellow are the mandatory columns.
 
-![Screenshot (201)](https://user-images.githubusercontent.com/78078351/159518027-cb2a3eea-923f-49b7-8633-0502d0935032.png)
+```{r out.width='100%', echo=F}
+knitr::include_graphics("https://user-images.githubusercontent.com/78078351/159518027-cb2a3eea-923f-49b7-8633-0502d0935032.png")
+```
+
 
 The Internal Reference File example for the LIQUID option can be downloaded from here:
 
@@ -129,7 +142,9 @@ Next, ADViSELipidomics, requires two Calibration Excel files, one for the Nonlab
 
 The picture below shows an example of a Calibration Excel file for the deuterated. 
 
-![example_calibration_deuterated](https://user-images.githubusercontent.com/78078351/161043392-9f9f3038-95eb-4e30-a465-1780fa6220d5.png)
+```{r out.width='100%', echo=F}
+knitr::include_graphics("https://user-images.githubusercontent.com/78078351/161043392-9f9f3038-95eb-4e30-a465-1780fa6220d5.png")
+```
 
 
 An example for the Calibration Deuterated and Calibration Nonlabeled Excel files can be downloaded here:
@@ -144,7 +159,9 @@ An example for the Calibration Deuterated and Calibration Nonlabeled Excel files
 
 If you already have a  matrix file containing the abundance for each lipid, you need just two Excel files: a Target File and a Data Matrix File. Here the Target File has only one mandatory column, the SampleID. The Data Matrix (.xlsx file) must have the list of the lipids in the first column, which must be called *"Lipids"*, and then the samples (or replicates) in the following columns, with the column names that is the same of the *SampleID* from the Target File. It is not necessary that the matrix is full (i.e. without missing values) since after uploaded, it is possible to filter and impute NAs. The picture below shows an example of a Data Matrix Excel file.
 
-![Excel_data_matrix](https://user-images.githubusercontent.com/78078351/160581333-cd7bf4ec-53ec-4c12-9bcc-d007d2dfbbe1.png)
+```{r out.width='100%', echo=F}
+knitr::include_graphics("https://user-images.githubusercontent.com/78078351/160581333-cd7bf4ec-53ec-4c12-9bcc-d007d2dfbbe1.png")
+```
 
 
 <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/circle-exclamation.svg" width="15" height="15"> **NOTE** 

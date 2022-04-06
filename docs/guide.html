@@ -74,9 +74,7 @@
 <p>This section allows to import and process lipidomic data from various sources.
 When you open this section for the first time after launch, a message box appears and asks you to write your name and your company. This information will be stored in the final output of ADViSELipidomics. By default, if you click on “Run”, the User will be <em>“Name”</em> and the Company will be <em>“Company”</em>.
 The picture below shows the Data Import &amp; Preprocessing section (with the different parts enlightened with red rectangles).</p>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/78078351/159950379-e3885176-0ccc-4bf1-b1eb-9f4378d468e2.png" alt=""><p class="caption">workflow_withbox</p>
-</div>
+<div class="inline-figure"><img src="https://user-images.githubusercontent.com/78078351/159950379-e3885176-0ccc-4bf1-b1eb-9f4378d468e2.png" width="100%"></div>
 <ul>
 <li>
 <strong>Rectangle A</strong> allows the user to choose between LipidSearch, LIQUID, Excel files, Summarized Experiment, and Metabolomics Workbench. Moreover, it is also possible to select between experiments with or without internal standards (this option is available only for LipidSearch import).</li>
@@ -93,9 +91,7 @@ The picture below shows the Data Import &amp; Preprocessing section (with the di
 <span class="header-section-number">4.2.1</span> LipidSearch (IS) EXAMPLE - IMPORTING &amp; FILTERING module<a class="anchor" aria-label="anchor" href="#sec321"><i class="fas fa-link"></i></a>
 </h3>
 <p>The first module is the IMPORTING &amp; FILTERING module where the user can upload the Target File, the Internal Reference File, and the Data files that come from LipidSearch.</p>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/78078351/160102565-67eadec1-8df0-40bb-91ab-7decb085ad26.png" alt=""><p class="caption">IMPORTING &amp; FILTERING module</p>
-</div>
+<div class="inline-figure"><img src="https://user-images.githubusercontent.com/78078351/160102565-67eadec1-8df0-40bb-91ab-7decb085ad26.png" width="60%" style="display: block; margin: auto;"></div>
 <ul>
 <li>
 <strong>Step 1.</strong> The first files that you have to import are the Target File and the Internal Reference File (Rectangle A, steps 1 and 2). Next to each of them, there is a button (yellow squared rectangle) that allows you to edit the Excel files. You can select only the columns that you need, filter the rows by one or more conditions and download the edited data. If you need to edit them, to apply the editing you have to enable the button next to the download button and click on the “Done” button (right top corner). Anyway, a help button guides you through the editing options.</li>
@@ -111,9 +107,7 @@ The picture below shows the Data Import &amp; Preprocessing section (with the di
 </h3>
 <p>If the previous module is completed, the CALIBRATION module appears next to it. The Calibration module creates the calibration curves and the calibration matrix. It uses the Internal Lipid Standards reported in the Internal Reference file, and the correspondence between the Concentration Files and the lipid classes declared in the Calibration File. This module extracts the relationships between peaks area and concentration values for each internal lipid standard, constructing the calibration curves with a linear model and plotting them. The linear regression model can be classical or robust, with zero or non-zero intercept. Finally, the calibration matrix resumes all the points from the calibration curves. After the calibration process, ADViSELipidomics stores slope and intercept values for the recovery module.
 As already stated, this module appears only if you are using LipidSearch output with Internal Standard (and you clicked on “Yes” in the radiobutton that asks you <em>“Do you have internal standards?”</em>). In this module, you need two Calibration Files (.xlsx, see Section <a href="inputdata.html#sec24">3.4</a>) and the Concentration files coming from LipidSearch related to the internal standard (.txt, see Section <a href="inputdata.html#sec21">3.1</a>).</p>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/78078351/159966937-26f75ea8-5ac0-405c-a92b-019f868d06c5.png" alt=""><p class="caption">CALIBRATION module</p>
-</div>
+<div class="inline-figure"><img src="https://user-images.githubusercontent.com/78078351/159966937-26f75ea8-5ac0-405c-a92b-019f868d06c5.png" width="60%" style="display: block; margin: auto;"></div>
 <ul>
 <li>
 <strong>Step. 1</strong> Here you can upload the Calibration Files (.xlsx) for both Deuterated and Nonlabeled. This step is very similar to Step 1 of the IMPORTING &amp; FILTERING module. You can find further information about these files in Section <a href="inputdata.html#sec24">3.4</a>.</li>
@@ -132,9 +126,7 @@ As already stated, this module appears only if you are using LipidSearch output 
 <span class="header-section-number">4.2.3</span> LipidSearch (IS) EXAMPLE - MISSING DATA &amp; SUMMARIZED EXPERIMENT<a class="anchor" aria-label="anchor" href="#sec323"><i class="fas fa-link"></i></a>
 </h3>
 <p>This is the last module of the preprocessing menu where you can filter and impute missing values (NAs), build the SummarizedExperiment object, and download it.</p>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/78078351/159970295-85bcb1fe-9fb1-4061-aa98-905c78933330.png" alt=""><p class="caption">MISSING DATA &amp; SUMMARIZED EXPERIMENT</p>
-</div>
+<div class="inline-figure"><img src="https://user-images.githubusercontent.com/78078351/159970295-85bcb1fe-9fb1-4061-aa98-905c78933330.png" width="60%" style="display: block; margin: auto;"></div>
 <ul>
 <li>
 <strong>Step 1.</strong> In the first step ADViSELipidomics computes the percentage of NAs, for each lipid (matrix rows) and each sample (matrix columns). Second, it allows retaining only lipids and/or samples with a percentage of missingness below thresholds chosen using the sliders. For example, if you set <em>Max missing data percentage allowable on lipids</em> to 0.3 <em>Max missing data percentage allowable on samples</em> to 0.6 that means that only lipids (rows) with less than 30% of NAs and samples (columns) with less than 60% of NAs are stored. After that, by clicking on the “Check filtered NAs” button, ADViSELipidomics provides the missing data distributions and the data dimension before and after filtering NAs.</li>
@@ -150,9 +142,7 @@ As already stated, this module appears only if you are using LipidSearch output 
 <span class="header-section-number">4.3</span> SumExp Visualization<a class="anchor" aria-label="anchor" href="#sec33"><i class="fas fa-link"></i></a>
 </h2>
 <p>Once you ended successfully the Preprocessing module, the first thing that you can do is check the just created SummarizedExperiment (SE) object. It can be done in the SumExp Visualization menu. The complex structure of the SE object can be investigated by a red gear icon where you can choose what part of the SE object should be shown and summarise the data (if you have technical replicates).</p>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/78078351/159973518-6b7fc106-020a-4185-8595-ff611671868d.png" alt=""><p class="caption">SumExp Visualization</p>
-</div>
+<div class="inline-figure"><img src="https://user-images.githubusercontent.com/78078351/159973518-6b7fc106-020a-4185-8595-ff611671868d.png" width="100%"></div>
 <p>In the picture above, it is shown the rowData part of the SE object containing the annotation on lipids. Each lipid in the “Lipids” contains a hyperlink to the SwissLipids online repository to provide structural, biological, and analytic details.</p>
 </div>
 <div id="sec34" class="section level2" number="4.4">
@@ -175,18 +165,15 @@ As already stated, this module appears only if you are using LipidSearch output 
 <li>
 <strong>Quality plots.</strong> It provides different typologies of plots (barplot, boxplot, density plot) to show the total amount of abundance (logarithmic scale) per sample, considering as reference a feature from the target file, to show possible unexpected behavior among samples or replicates for the same sample.</li>
 </ul>
-<div class="inline-figure">The picture below shows an example of the Lipid class proportion plot.
-<img src="https://user-images.githubusercontent.com/78078351/159976950-0e3220d2-dc21-40a2-a2a6-4256b30a5d14.png" alt="Lipid class proportion">
-</div>
+<p>The picture below shows an example of the Lipid class proportion plot.</p>
+<div class="inline-figure"><img src="https://user-images.githubusercontent.com/78078351/159976950-0e3220d2-dc21-40a2-a2a6-4256b30a5d14.png" width="100%"></div>
 </div>
 <div id="sec342" class="section level3" number="4.4.2">
 <h3>
 <span class="header-section-number">4.4.2</span> Clustering<a class="anchor" aria-label="anchor" href="#sec342"><i class="fas fa-link"></i></a>
 </h3>
 <p>The Clustering sub-menu allows the user to cluster the data by lipids or samples. The user can choose the number of clusters and the clustering method among the following algorithms: hierarchical clustering (using single, complete, Ward as linkage function) or partitioning clustering (k-means, PAM, Clara). If you choose a partitioning clustering, ADViSELipidomics performs first a PCA. Additional plots, such as the silhouette plot, can suggest the number of clusters to use.</p>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/78078351/159980474-1cc6dbe4-e745-44d5-87ce-72f636454d2a.png" alt=""><p class="caption">Clustering</p>
-</div>
+<div class="inline-figure"><img src="https://user-images.githubusercontent.com/78078351/159980474-1cc6dbe4-e745-44d5-87ce-72f636454d2a.png" width="100%"></div>
 </div>
 <div id="sec343" class="section level3" number="4.4.3">
 <h3>
@@ -201,9 +188,8 @@ As already stated, this module appears only if you are using LipidSearch output 
 <li>
 <strong>sPLS-DA.</strong> ADViSELipidomics can compute also the sparse version of the PLS-DA. The panel is very similar to the PLS-DA panel but since it’s a sparse version, it is possible to choose the number of variables to select on each component (called “KeepX”). Also here ADViSELipidomics can perform a Cross-Validation that helps the user to choose the best number of components and the best “KeepX”.</li>
 </ul>
-<div class="inline-figure">Here’s an example of a 2D plot for the PCA.
-<img src="https://user-images.githubusercontent.com/78078351/159980009-d4aa02bc-87a0-4bb0-a5af-8cc8f4df0171.png" alt="PCA">
-</div>
+<p>Here’s an example of a 2D plot for the PCA.</p>
+<div class="inline-figure"><img src="https://user-images.githubusercontent.com/78078351/159980009-d4aa02bc-87a0-4bb0-a5af-8cc8f4df0171.png" width="100%"></div>
 </div>
 </div>
 <div id="sec35" class="section level2" number="4.5">
@@ -215,14 +201,9 @@ As already stated, this module appears only if you are using LipidSearch output 
 <h3>
 <span class="header-section-number">4.5.1</span> Differential Analysis<a class="anchor" aria-label="anchor" href="#sec351"><i class="fas fa-link"></i></a>
 </h3>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/78078351/159989613-5ee22334-3777-4bda-a2b0-5e33c8cbf26e.png" alt=""><p class="caption">DA</p>
-</div>
 <p>The Differential Analysis sub-menu applies statistical algorithms to identify lipids with a different abundance among samples associated with experimental conditions (i.e., treatment versus control). It has two panels: <strong>Build DA</strong> and <strong>Comparisons</strong>. The first allows the user to build and run the differential analysis, while the second shows the “differential expressed” lipids with a Venn Diagram and an Upset plot.</p>
 <p>The picture below shows the first panel, <strong>Buil DA</strong> with the different parts enlightened in red rectangles.</p>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/78078351/160097413-8f0bee68-75ae-45d5-b64d-b65c3d35c1be.png" alt=""><p class="caption">DA_box</p>
-</div>
+<div class="inline-figure"><img src="https://user-images.githubusercontent.com/78078351/160097413-8f0bee68-75ae-45d5-b64d-b65c3d35c1be.png" width="100%"></div>
 <ul>
 <li>
 <strong>Rectangle A.</strong> Here you can select between one of the two SE objects obtained from the previous steps (i.e., the one with the lipid abundance of all samples or where the technical replicates are averaged). It is possible to normalize the data matrix by a scaling factor at this stage (“Normalization between replicates or samples”). Moreover, when a data matrix has technical replicates, you can also incorporate the replicate effect in the model by checking the “Replicates effect” box.</li>
@@ -234,18 +215,14 @@ As already stated, this module appears only if you are using LipidSearch output 
 <strong>Rectangle D.</strong> In this rectangle there are some plot options like the choice of the contrast, the threshold for the logFC, and the possibility to add another plot. There are two different plots: a volcano plot and a MA plot, both interactive where you can change the fill variable and add labels to lipids of interest.</li>
 </ul>
 <p>After ADViSELipidomics performed the DA, you can go to the <strong>Comparisons</strong> panel to visualize the “differential expressed” lipids and perform pairwise comparisons between different contrasts using the Venn diagram and the Upset plot. Finally, it reports the list of common lipids in tabular form. These two plots are available only with at least two contrasts.</p>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/78078351/160099334-d1d587d3-3ab3-4f65-823f-c608ec731b30.png" alt=""><p class="caption">Venn</p>
-</div>
+<div class="inline-figure"><img src="https://user-images.githubusercontent.com/78078351/160099334-d1d587d3-3ab3-4f65-823f-c608ec731b30.png" width="100%"></div>
 </div>
 <div id="sec352" class="section level3" number="4.5.2">
 <h3>
 <span class="header-section-number">4.5.2</span> Enrichment Analysis<a class="anchor" aria-label="anchor" href="#sec352"><i class="fas fa-link"></i></a>
 </h3>
 <p>The Enrichment Analysis sub-menu allows for building different lipid sets from the chemical features of the lipids: i.e., lipid classes, total chain length (the sum of all carbon atoms in the tails), total unsaturation (the sum of all the double bonds in the tails). Then, after defining a ranking for the lipids (i.e., logarithmic Fold Change, p-value, adjusted p-value, or B statistic), it identifies enriched sets of lipids using a permutation test. To achieve a robust result, it was necessary to perform a few million permutations, hence this process may take a while.</p>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/78078351/160098797-fc3ec3a3-c53c-4808-b59d-d5f9dc960455.png" alt=""><p class="caption">Enrichment</p>
-</div>
+<div class="inline-figure"><img src="https://user-images.githubusercontent.com/78078351/160098797-fc3ec3a3-c53c-4808-b59d-d5f9dc960455.png" width="100%"></div>
 
 </div>
 </div>
@@ -296,7 +273,7 @@ As already stated, this module appears only if you are using LipidSearch output 
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2022-04-05.</p>
+    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2022-04-06.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
