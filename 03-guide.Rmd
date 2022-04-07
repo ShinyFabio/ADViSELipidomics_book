@@ -13,7 +13,7 @@ When you open this section for the first time after launch, a message box appear
 The picture below shows the Data Import & Preprocessing section (with the different parts enlightened with red rectangles). 
 
 ```{r out.width='100%', echo=F}
-knitr::include_graphics("https://user-images.githubusercontent.com/78078351/159950379-e3885176-0ccc-4bf1-b1eb-9f4378d468e2.png")
+knitr::include_graphics("images/module_inpute.png")
 ```
 
 
@@ -29,7 +29,7 @@ The first module is the IMPORTING & FILTERING module where the user can upload t
 
 
 ```{r out.width='60%', fig.align = 'center', echo=F}
-knitr::include_graphics("https://user-images.githubusercontent.com/78078351/160102565-67eadec1-8df0-40bb-91ab-7decb085ad26.png")
+knitr::include_graphics("images/input_step.png")
 ```
 
 
@@ -42,7 +42,7 @@ If the previous module is completed, the CALIBRATION module appears next to it. 
 As already stated, this module appears only if you are using LipidSearch output with Internal Standard (and you clicked on "Yes" in the radiobutton that asks you *"Do you have internal standards?"*). In this module, you need two Calibration Files (.xlsx, see Section \@ref(sec24)) and the Concentration files coming from LipidSearch related to the internal standard (.txt, see Section \@ref(sec21)). 
 
 ```{r out.width='60%', fig.align = 'center', echo=F}
-knitr::include_graphics("https://user-images.githubusercontent.com/78078351/159966937-26f75ea8-5ac0-405c-a92b-019f868d06c5.png")
+knitr::include_graphics("images/calibration_step.png")
 ```
 
 
@@ -57,7 +57,7 @@ knitr::include_graphics("https://user-images.githubusercontent.com/78078351/1599
 This is the last module of the preprocessing menu where you can filter and impute missing values (NAs), build the SummarizedExperiment object, and download it. 
 
 ```{r out.width='60%', fig.align = 'center',echo=F}
-knitr::include_graphics("https://user-images.githubusercontent.com/78078351/159970295-85bcb1fe-9fb1-4061-aa98-905c78933330.png")
+knitr::include_graphics("images/filtering_step.png")
 ```
 
 
@@ -69,7 +69,7 @@ knitr::include_graphics("https://user-images.githubusercontent.com/78078351/1599
 Once you ended successfully the Preprocessing module, the first thing that you can do is check the just created SummarizedExperiment (SE) object. It can be done in the SumExp Visualization menu. The complex structure of the SE object can be investigated by a red gear icon where you can choose what part of the SE object should be shown and summarise the data (if you have technical replicates).
 
 ```{r out.width='100%', echo=F}
-knitr::include_graphics("https://user-images.githubusercontent.com/78078351/159973518-6b7fc106-020a-4185-8595-ff611671868d.png")
+knitr::include_graphics("images/sumexp.png")
 ```
 
 
@@ -89,7 +89,7 @@ This sub-menu allows the user to create different types of plots to show the tre
 The picture below shows an example of the Lipid class proportion plot.
 
 ```{r out.width='100%', echo=F}
-knitr::include_graphics("https://user-images.githubusercontent.com/78078351/159976950-0e3220d2-dc21-40a2-a2a6-4256b30a5d14.png")
+knitr::include_graphics("images/taxabarplot.png")
 ```
 
 
@@ -98,7 +98,7 @@ knitr::include_graphics("https://user-images.githubusercontent.com/78078351/1599
 The Clustering sub-menu allows the user to cluster the data by lipids or samples. The user can choose the number of clusters and the clustering method among the following algorithms: hierarchical clustering (using single, complete, Ward as linkage function) or partitioning clustering (k-means, PAM, Clara). If you choose a partitioning clustering, ADViSELipidomics performs first a PCA. Additional plots, such as the silhouette plot, can suggest the number of clusters to use.
 
 ```{r out.width='100%', echo=F}
-knitr::include_graphics("https://user-images.githubusercontent.com/78078351/159980474-1cc6dbe4-e745-44d5-87ce-72f636454d2a.png")
+knitr::include_graphics("images/clustering.png")
 ```
 
 
@@ -113,7 +113,7 @@ The Dimensionality Reduction sub-menu allows the user to choose between unsuperv
 Here's an example of a 2D plot for the PCA.
 
 ```{r out.width='100%', echo=F}
-knitr::include_graphics("https://user-images.githubusercontent.com/78078351/159980009-d4aa02bc-87a0-4bb0-a5af-8cc8f4df0171.png")
+knitr::include_graphics("images/pca.png")
 ```
 
 
@@ -127,7 +127,7 @@ The Differential Analysis sub-menu applies statistical algorithms to identify li
 The picture below shows the first panel, **Buil DA** with the different parts enlightened in red rectangles.
 
 ```{r out.width='100%', echo=F}
-knitr::include_graphics("https://user-images.githubusercontent.com/78078351/160097413-8f0bee68-75ae-45d5-b64d-b65c3d35c1be.png")
+knitr::include_graphics("images/DA.png")
 ```
 
 * **Rectangle A.** Here you can select between one of the two SE objects obtained from the previous steps (i.e., the one with the lipid abundance of all samples or where the technical replicates are averaged). It is possible to normalize the data matrix by a scaling factor at this stage ("Normalization between replicates or samples"). Moreover, when a data matrix has technical replicates, you can also incorporate the replicate effect in the model by checking the "Replicates effect" box.
@@ -139,7 +139,7 @@ knitr::include_graphics("https://user-images.githubusercontent.com/78078351/1600
 After ADViSELipidomics performed the DA, you can go to the **Comparisons** panel to visualize the "differential expressed" lipids and perform pairwise comparisons between different contrasts using the Venn diagram and the Upset plot. Finally, it reports the list of common lipids in tabular form. These two plots are available only with at least two contrasts.
 
 ```{r out.width='100%', echo=F}
-knitr::include_graphics("https://user-images.githubusercontent.com/78078351/160099334-d1d587d3-3ab3-4f65-823f-c608ec731b30.png")
+knitr::include_graphics("images/venn.png")
 ```
 
 
@@ -148,6 +148,6 @@ knitr::include_graphics("https://user-images.githubusercontent.com/78078351/1600
 The Enrichment Analysis sub-menu allows for building different lipid sets from the chemical features of the lipids: i.e., lipid classes, total chain length (the sum of all carbon atoms in the tails), total unsaturation (the sum of all the double bonds in the tails). Then, after defining a ranking for the lipids (i.e., logarithmic Fold Change, p-value, adjusted p-value, or B statistic), it identifies enriched sets of lipids using a permutation test. To achieve a robust result, it was necessary to perform a few million permutations, hence this process may take a while. 
 
 ```{r out.width='100%', echo=F}
-knitr::include_graphics("https://user-images.githubusercontent.com/78078351/160098797-fc3ec3a3-c53c-4808-b59d-d5f9dc960455.png")
+knitr::include_graphics("images/enrichment.png")
 ```
 
