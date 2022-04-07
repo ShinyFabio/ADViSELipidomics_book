@@ -2,7 +2,7 @@ bookdown::bs4_book:
   css: style.css
   theme:
     primary: "#2c2f76"
-  repo: https://github.com/rstudio/bookdown-demo
+  repo: https://github.com/ShinyFabio/ADViSELipidomics_book
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
