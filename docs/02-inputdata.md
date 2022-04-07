@@ -80,7 +80,7 @@ If your Target File doesn't contain at least one informative column about the sa
 
 The example target file can be downloaded from here:
 
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [Targetfile_Lipidomics.xlsx](https://github.com/ShinyFabio/ADViSELipidomics/files/8325363/Targetfile_Lipidomics_new.xlsx)
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [Targetfile_Lipidomics.xlsx](https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Targetfile_Lipidomics_example.xlsx)
 
 
 ##  Internal Reference File (LipidSearch, LIQUID) {#sec23}
