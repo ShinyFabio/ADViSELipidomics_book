@@ -104,7 +104,7 @@ The picture below shows an Internal Reference File example in the case of LipidS
 
 The Internal Reference File example for the LipidSearch with Internal Standards option can be downloaded from here:
 
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [Internal_Reference_file_LipidSearch_withIS.xlsx](https://github.com/ShinyFabio/ADViSELipidomics/files/8370364/Internal_Reference_file_LipidSearch_withIS.xlsx)
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [Internal_Reference_file_LipidSearch_withIS.xlsx](https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Internal_Reference_file_LipidSearch_withIS.xlsx)
 
 
 
@@ -121,7 +121,7 @@ The picture below shows an Internal Reference File example in the case of LIQUID
 
 The Internal Reference File example for the LIQUID option can be downloaded from here:
 
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [Internal_Reference_file_LIQUID.xlsx](https://github.com/ShinyFabio/ADViSELipidomics/files/8363693/Internal_Reference_file_LIQUID.xlsx)
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [Internal_Reference_file_LIQUID.xlsx](https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Internal_Reference_file_LIQUID.xlsx)
 
 
 ## Calibration Files (LipidSearch with Internal Standards) {#sec24}
@@ -140,9 +140,9 @@ The picture below shows an example of a Calibration Excel file for the deuterate
 An example for the Calibration Deuterated and Calibration Nonlabeled Excel files can be downloaded here:
 
 
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [Calibration_Deuterated.xlsx](https://github.com/ShinyFabio/ADViSELipidomics/files/8363641/Calibration_Deuterated.xlsx)
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [Calibration_Deuterated.xlsx](https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Calibration_Deuterated.xlsx)
 
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [Calibration_NonLabeled.xlsx](https://github.com/ShinyFabio/ADViSELipidomics/files/8326075/Calibration_NonLabeled.xlsx)
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [Calibration_NonLabeled.xlsx](https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Calibration_NonLabeled.xlsx)
 
 
 ## User’s Excel File {#sec25}
@@ -157,7 +157,7 @@ The column names in the data matrix must follow the same SampleID rules describe
 
 An example for the Data Matrix can be download from here:
 
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [Excel_Data_Matrix.xlsx](https://github.com/ShinyFabio/ADViSELipidomics/files/8370052/Excel_Data_Matrix.xlsx)
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [Excel_Data_Matrix.xlsx](https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Excel_Data_Matrix.xlsx)
 
 
 ## SummarizedExperiment {#sec26}

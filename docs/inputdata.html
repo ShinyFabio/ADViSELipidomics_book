@@ -43,10 +43,16 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled"><li><a class="" href="index.html"><span class="header-section-number">Chapter 3</span> Input Data</a></li></ul>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> About</a></li>
+<li><a class="" href="install.html"><span class="header-section-number">2</span> Install</a></li>
+<li><a class="active" href="inputdata.html"><span class="header-section-number">3</span> Input Data</a></li>
+<li><a class="" href="guide.html"><span class="header-section-number">4</span> Guide</a></li>
+<li><a class="" href="filestudy.html"><span class="header-section-number">5</span> Files Case Study #1</a></li>
+</ul>
 
         <div class="book-extra">
-          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+          <p><a id="book-repo" href="https://github.com/ShinyFabio/ADViSELipidomics_book">View book source <i class="fab fa-github"></i></a></p>
         </div>
       </nav>
 </div>
@@ -172,7 +178,7 @@ If your Target File doesn’t contain at least one informative column about the 
 <p>The picture below shows an Internal Reference File example in the case of LipidSearch and the presence of Internal Standards. In yellow are the mandatory columns, and in green the columns needed only in the presence of Internal Standards. The “Unit_measure” column is not used but can be useful to check that each standard concentration has the same unit measure. If you have different units measure, convert them to the same.</p>
 <div class="inline-figure"><img src="images/internal_reference_example.png" width="100%"></div>
 <p>The Internal Reference File example for the LipidSearch with Internal Standards option can be downloaded from here:</p>
-<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"><a href="https://github.com/ShinyFabio/ADViSELipidomics/files/8370364/Internal_Reference_file_LipidSearch_withIS.xlsx">Internal_Reference_file_LipidSearch_withIS.xlsx</a></p>
+<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"><a href="https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Internal_Reference_file_LipidSearch_withIS.xlsx">Internal_Reference_file_LipidSearch_withIS.xlsx</a></p>
 <ul>
 <li>
 <strong>LIQUID</strong>
@@ -191,7 +197,7 @@ If your Target File doesn’t contain at least one informative column about the 
 <p>The picture below shows an Internal Reference File example in the case of LIQUID. In yellow are the mandatory columns.</p>
 <div class="inline-figure"><img src="images/int_reference_LIQUID.png" width="100%"></div>
 <p>The Internal Reference File example for the LIQUID option can be downloaded from here:</p>
-<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"><a href="https://github.com/ShinyFabio/ADViSELipidomics/files/8363693/Internal_Reference_file_LIQUID.xlsx">Internal_Reference_file_LIQUID.xlsx</a></p>
+<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"><a href="https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Internal_Reference_file_LIQUID.xlsx">Internal_Reference_file_LIQUID.xlsx</a></p>
 </div>
 <div id="sec24" class="section level2" number="3.4">
 <h2>
@@ -210,8 +216,8 @@ Next, ADViSELipidomics, requires two Calibration Excel files, one for the Nonlab
 <p>The picture below shows an example of a Calibration Excel file for the deuterated.</p>
 <div class="inline-figure"><img src="images/calibration_deut_example.png" width="100%"></div>
 <p>An example for the Calibration Deuterated and Calibration Nonlabeled Excel files can be downloaded here:</p>
-<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"><a href="https://github.com/ShinyFabio/ADViSELipidomics/files/8363641/Calibration_Deuterated.xlsx">Calibration_Deuterated.xlsx</a></p>
-<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"><a href="https://github.com/ShinyFabio/ADViSELipidomics/files/8326075/Calibration_NonLabeled.xlsx">Calibration_NonLabeled.xlsx</a></p>
+<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"><a href="https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Calibration_Deuterated.xlsx">Calibration_Deuterated.xlsx</a></p>
+<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"><a href="https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Calibration_NonLabeled.xlsx">Calibration_NonLabeled.xlsx</a></p>
 </div>
 <div id="sec25" class="section level2" number="3.5">
 <h2>
@@ -222,7 +228,7 @@ Next, ADViSELipidomics, requires two Calibration Excel files, one for the Nonlab
 <p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/circle-exclamation.svg" width="15" height="15"><strong>NOTE</strong>
 The column names in the data matrix must follow the same SampleID rules described in Section <a href="inputdata.html#sec22">3.2</a>.</p>
 <p>An example for the Data Matrix can be download from here:</p>
-<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"><a href="https://github.com/ShinyFabio/ADViSELipidomics/files/8370052/Excel_Data_Matrix.xlsx">Excel_Data_Matrix.xlsx</a></p>
+<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"><a href="https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Excel_Data_Matrix.xlsx">Excel_Data_Matrix.xlsx</a></p>
 </div>
 <div id="sec26" class="section level2" number="3.6">
 <h2>
@@ -239,15 +245,25 @@ The column names in the data matrix must follow the same SampleID rules describe
 </div>
 </div>
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="empty"></div>
+<div class="prev"><a href="install.html"><span class="header-section-number">2</span> Install</a></div>
+<div class="next"><a href="guide.html"><span class="header-section-number">4</span> Guide</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <div id="book-on-this-page"></div>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#inputdata"><span class="header-section-number">3</span> Input Data</a></li>
+<li><a class="nav-link" href="#sec21"><span class="header-section-number">3.1</span> Data files (LipidSearch or LIQUID)</a></li>
+<li><a class="nav-link" href="#sec22"><span class="header-section-number">3.2</span> Target File (LipidSearch, LIQUID, and User’s Excel File)</a></li>
+<li><a class="nav-link" href="#sec23"><span class="header-section-number">3.3</span> Internal Reference File (LipidSearch, LIQUID)</a></li>
+<li><a class="nav-link" href="#sec24"><span class="header-section-number">3.4</span> Calibration Files (LipidSearch with Internal Standards)</a></li>
+<li><a class="nav-link" href="#sec25"><span class="header-section-number">3.5</span> User’s Excel File</a></li>
+<li><a class="nav-link" href="#sec26"><span class="header-section-number">3.6</span> SummarizedExperiment</a></li>
+<li><a class="nav-link" href="#sec27"><span class="header-section-number">3.7</span> Metabolomics Workbench</a></li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-          
+<li><a id="book-source" href="https://github.com/ShinyFabio/ADViSELipidomics_book/blob/main/02-inputdata.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ShinyFabio/ADViSELipidomics_book/edit/main/02-inputdata.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -259,7 +275,7 @@ The column names in the data matrix must follow the same SampleID rules describe
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2022-04-06.</p>
+    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2022-04-07.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
