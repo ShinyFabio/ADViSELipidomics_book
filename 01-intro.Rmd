@@ -37,7 +37,7 @@ library(devtools)
 install_github("ShinyFabio/ADViSELipidomics")
 ```
 
-We kindly suggest updating all the R packages requested during the installation process of ADViSELipidomics Shiny application.
+We kindly suggest updating all the R packages requested during the installation process of ADViSELipidomics Shiny application. Be careful that if you need to install many packages and you decide to use compilation, the process could take a lot depending on your hardware and operating system.
 Finally to execute ADViSELipidomics the user can type the following code in the RStudio console:
 
 ``` r
