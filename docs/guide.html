@@ -7,7 +7,7 @@
 <title>Chapter 4 Guide | ADViSELipidomics user manual</title>
 <meta name="author" content="Fabio Della Rocca">
 <meta name="description" content="ADViSELipidomics has a graphical user interface (GUI) implemented using the shiny and golem R packages. It has five main sections: Home, Data Import &amp; Preprocessing, SumExp Visualization,...">
-<meta name="generator" content="bookdown 0.25 with bs4_book()">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
 <meta property="og:title" content="Chapter 4 Guide | ADViSELipidomics user manual">
 <meta property="og:type" content="book">
 <meta property="og:url" content="your book url like https://shinyfabio.github.io/ADViSELipidomics_book/guide.html">
@@ -221,7 +221,7 @@ As already stated, this module appears only if you are using LipidSearch output 
 <h3>
 <span class="header-section-number">4.5.2</span> Enrichment Analysis<a class="anchor" aria-label="anchor" href="#sec352"><i class="fas fa-link"></i></a>
 </h3>
-<p>The Enrichment Analysis sub-menu allows for building different lipid sets from the chemical features of the lipids: i.e., lipid classes, total chain length (the sum of all carbon atoms in the tails), total unsaturation (the sum of all the double bonds in the tails). Then, after defining a ranking for the lipids (i.e., logarithmic Fold Change, p-value, adjusted p-value, or B statistic), it identifies enriched sets of lipids using a permutation test. To achieve a robust result, it was necessary to perform a few million permutations, hence this process may take a while.</p>
+<p>The Enrichment Analysis sub-menu allows for building different lipid sets from the chemical features of the lipids: i.e., lipid classes, total chain length (the sum of all carbon atoms in the tails), total unsaturation (the sum of all the double bonds in the tails). After defining a ranking for the differential abundant lipids (i.e., ranking considering logarithmic Fold Change, p-value, adjusted p-value, or B statistic), it identifies enriched sets of lipids using a permutation test. To achieve a robust result, it was necessary to perform a few million permutations, hence this process may take a while. Since Enrichment Analysis takes as input the differential analysis results, you need first to run the last one.</p>
 <div class="inline-figure"><img src="images/enrichment.png" width="100%"></div>
 
 </div>
@@ -273,7 +273,7 @@ As already stated, this module appears only if you are using LipidSearch output 
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2022-04-07.</p>
+    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2022-06-24.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -37,13 +37,16 @@ library(devtools)
 install_github("ShinyFabio/ADViSELipidomics")
 ```
 
-We kindly suggest updating all the R packages requested during the installation process of ADViSELipidomics Shiny application.
+We kindly suggest updating all the R packages requested during the installation process of ADViSELipidomics Shiny application. Be careful that if you need to install many packages and you decide to use compilation, the process could take a lot depending on your hardware and operating system.
 Finally to execute ADViSELipidomics the user can type the following code in the RStudio console:
 
 ``` r
 library(ADViSELipidomics)
 run_ADViSELipidomics()
 ```
+
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/circle-exclamation.svg" width="15" height="15"> **NOTE**  
+Depending on the screen size and especially the resolution of your monitor, ADViSELipidomics interface can be a bit different from how it was thought and built. Try to reduce or increment the zoom using **Ctrl** + **+** (plus) or **Ctrl** + **-** (minus) for Windows users or .... for Mac users.
 
 Finally, when a new ADViSELipidomics version is released, it can be updated with the same code for the installation.
 

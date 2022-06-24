@@ -7,7 +7,7 @@
 <title>Chapter 3 Input Data | ADViSELipidomics user manual</title>
 <meta name="author" content="Fabio Della Rocca">
 <meta name="description" content="ADViSELipidomics allows the user to import files concerning different types of data: * LipidSearch or LIQUID. ADViSELipidomics deals with the data files containing information on chromatographic...">
-<meta name="generator" content="bookdown 0.25 with bs4_book()">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
 <meta property="og:title" content="Chapter 3 Input Data | ADViSELipidomics user manual">
 <meta property="og:type" content="book">
 <meta property="og:url" content="your book url like https://shinyfabio.github.io/ADViSELipidomics_book/inputdata.html">
@@ -114,7 +114,7 @@
 <h2>
 <span class="header-section-number">3.1</span> Data files (LipidSearch or LIQUID)<a class="anchor" aria-label="anchor" href="#sec21"><i class="fas fa-link"></i></a>
 </h2>
-<p>The output of LipidSearch and LIQUID are some text files containing information on chromatographic peak area or peak intensity per lipid. If your data come from <strong>LipidSearch</strong> you should have a deuterated file and a non-labeled file for each sample (or replicate). The extension of these files should be .txt. If your data come from <strong>LIQUID</strong> you can have a positive and a negative file, with a .tsv extension. In any case, put your data file in a folder and rename each file with your sample id in a proper way.</p>
+<p>The output of LipidSearch and LIQUID are some text files containing information on chromatographic peak area or peak intensity per lipid. If your data come from <strong>LipidSearch</strong> you should have a deuterated file and a non-labeled file for each sample (or replicate). The extension of these files should be .txt. ADViSELIpidomics accepts files from LipidSearch versions 4.2.29 or the latest 5.0. If your data come from <strong>LIQUID</strong> you can have a positive and a negative file, with a .tsv extension. In any case, put your data file in a folder and rename each file with your sample id in a proper way.</p>
 <p><strong>Example:</strong><br>
 Your sample is called “AF-1CM” and you have two technical replicates. Then, depending on the output software, the name of the data files should be:</p>
 <ul>
@@ -123,7 +123,7 @@ Your sample is called “AF-1CM” and you have two technical replicates. Then, 
 </ul>
 <p>The last two characters (e.g. “_1”) refer to the technical replicate. If you don’t have technical replicates just remove these two last characters (so for example in the case of LipidSearch you should have “AF-1C-M_deuterated.txt” and “AF-1C-M_nonlabeled.txt”).</p>
 <p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/circle-exclamation.svg" width="15" height="15"><strong>NOTE</strong><br>
-In the choice of your sample name, it’s better to avoid special characters and **DO NOT use underscores (_)**. This character is used by ADViSELipidomics to split the file name into three parts: the sample name, the type of file (deuterated/nonlabeled or positive/negative), and the technical replicate as shown in the following picture:</p>
+In the choice of your sample name, it’s better to avoid special characters and <strong>DO NOT use underscores (_)</strong> . This character is used by ADViSELipidomics to split the file name into three parts: the sample name, the type of file (deuterated/nonlabeled or positive/negative), and the technical replicate as shown in the following picture:</p>
 <div class="inline-figure"><img src="images/notation_files.png" width="100%"></div>
 <p>For example, a bad name could be “Blood_bag_deuterated_1.txt”, while a good name is “Blood-bag_deuterated_1.txt”.</p>
 </div>
@@ -140,7 +140,7 @@ In the choice of your sample name, it’s better to avoid special characters and
 <li>
 <strong>Norm_factor (LipidSearch, LIQUID - optional)</strong> If you need to normalize your data by a normalization factor, you can add this column and write a number (be careful with decimal points) for each sample. If it’s not present, data won’t be normalized.</li>
 </ul>
-<p>In the picture below there is a Target File example where the mandatory columns are enlightened in yellow and the optional column in green. You can fill the Target File with any other informative column, just try to avoid special characters like \^$?*/|+()<span></span> and whitespace. You can use - or _ instead of whitespace.</p>
+<p>In the picture below there is a Target File example where the mandatory columns are enlightened in yellow and the optional column in green. You can fill the Target File with any other informative column, just try to avoid special characters like \^$?*/|+()[]-{} and whitespace. You can use <strong>_</strong> instead of whitespace. For example, a column “Bio_replicate” may contain values like “BD1” or “BD_1” but not “BD-1” (Differential Analysis doesn’t work if there are “-”).</p>
 <p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/circle-exclamation.svg" width="15" height="15"><strong>NOTE</strong><br>
 If your Target File doesn’t contain at least one informative column about the samples (e.g. Product, Model_type, etc.), you can’t perform any exploratory or statistical analysis.</p>
 <div class="inline-figure"><img src="images/target_file_example.png" width="100%"></div>
@@ -165,7 +165,7 @@ If your Target File doesn’t contain at least one informative column about the 
 <li>
 <strong>MaxRt</strong> maximum retention time of the class (numeric)</li>
 <li>
-<strong>InternalStandardLipidIon</strong> name of each internal lipid standard according to the nomenclature of LipidSearch (e.g. <em>Cer(d18:1_17:0)-H</em> )</li>
+<strong>InternalStandardLipidIon</strong> name of each internal lipid standard according to the <strong>nomenclature of LipidSearch*</strong> (e.g. <em>Cer(d18:1_17:0)-H</em> )</li>
 <li>
 <strong>MinLinearity</strong> minimum value for the range of linearity in the calibration curves. (numeric) ONLY IF YOU USE INTERNAL STANDARD</li>
 <li>
@@ -175,6 +175,8 @@ If your Target File doesn’t contain at least one informative column about the 
 </ul>
 </li>
 </ul>
+<p>*<strong>nomenclature of LipidSearch:</strong> LipidSearch nomenclature is very similar to Lipid Maps nomenclature except for the using of underscore instead of backslash between different stereospecific numbering (sn) and the absence of the double-bond geometry. An example of the use of the nomenclature can be seen in the picture below.</p>
+<div class="inline-figure"><img src="images/nomenclature.png" width="100%"></div>
 <p>The picture below shows an Internal Reference File example in the case of LipidSearch and the presence of Internal Standards. In yellow are the mandatory columns, and in green the columns needed only in the presence of Internal Standards. The “Unit_measure” column is not used but can be useful to check that each standard concentration has the same unit measure. If you have different units measure, convert them to the same.</p>
 <div class="inline-figure"><img src="images/internal_reference_example.png" width="100%"></div>
 <p>The Internal Reference File example for the LipidSearch with Internal Standards option can be downloaded from here:</p>
@@ -275,7 +277,7 @@ The column names in the data matrix must follow the same SampleID rules describe
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2022-04-07.</p>
+    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2022-06-24.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
