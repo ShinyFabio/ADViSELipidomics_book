@@ -38,7 +38,7 @@ Before running ADViSELipidomics make sure that you have all the required files a
 
 ## Data files (LipidSearch or LIQUID) {#sec21}
 
-The output of LipidSearch and LIQUID are some text files containing information on chromatographic peak area or peak intensity per lipid. If your data come from **LipidSearch** you should have a deuterated file and a non-labeled file for each sample (or replicate). The extension of these files should be .txt. ADViSELIpidomics accepts files from LipidSearch versions 4.2.29 or the latest 5.0. If your data come from **LIQUID** you can have a positive and a negative file, with a .tsv extension. In any case, put your data file in a folder and rename each file with your sample id in a proper way. 
+The output of LipidSearch and LIQUID are some text files containing information on chromatographic peak area or peak intensity per lipid. If your data come from **LipidSearch** you should have a deuterated file and a non-labeled file for each sample (or replicate). The extension of these files should be .txt. ADViSELIpidomics accepts files from LipidSearch version 4.2.29. If your data come from **LIQUID** you can have a positive and a negative file, with a .tsv extension. In any case, put your data file in a folder and rename each file with your sample id in a proper way. 
 
 **Example:**  
 Your sample is called "AF-1CM" and you have two technical replicates. Then, depending on the output software, the name of the data files should be:
