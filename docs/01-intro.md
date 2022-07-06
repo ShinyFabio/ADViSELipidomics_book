@@ -46,7 +46,7 @@ run_ADViSELipidomics()
 ```
 
 <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/circle-exclamation.svg" width="15" height="15"> **NOTE**  
-Depending on the screen size and especially the resolution of your monitor, ADViSELipidomics interface can be a bit different from how it was thought and built. Try to reduce or increment the zoom using **Ctrl** + **+** (plus) or **Ctrl** + **-** (minus) for Windows users or .... for Mac users.
+Depending on the screen size and especially the resolution of your monitor, ADViSELipidomics interface can be a bit different from how it was thought and built. Try to reduce or increment the zoom using **Ctrl +**/**Ctrl -**  for Windows users or **Command +**/**Command -** for Mac users.
 
 Finally, when a new ADViSELipidomics version is released, it can be updated with the same code for the installation.
 
