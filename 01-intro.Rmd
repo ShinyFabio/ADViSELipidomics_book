@@ -1,5 +1,5 @@
 # Install
-ADViSELipidomics is a stand-alone Shiny application developed in RStudio IDE (RStudio > 1.4) and implemented using the R language (R > 4.0), available at the following GitHub page: https://github.com/ShinyFabio/ADViSELipidomics. ADViSELipidomics is multi-platform. We tested its functionalities on the main operating systems: Windows 10, Windows 11, macOS 12, Ubuntu 18, Ubuntu 20. 
+ADViSELipidomics is a stand-alone Shiny application developed in RStudio IDE (RStudio > 1.4) and implemented using the R language (R > 4.0), available at the following GitHub page: https://github.com/ShinyFabio/ADViSELipidomics. ADViSELipidomics is multi-platform. We tested its functionalities on the main operating systems: Windows 10, Windows 11, macOS 12, Ubuntu 18, and Ubuntu 20. 
 The user must first install R (https://www.r-project.org) and R studio (https://www.rstudio.com), if not yet available. Then, before installing ADViSELipidomics, the user might need to perform a few supplementary steps that depend on the operating systems:
 
 -   **Windows** Install Rtools, a collection of tools necessary for building R packages in Windows, available at the following link: <https://cran.r-project.org/bin/windows/Rtools>
@@ -27,7 +27,7 @@ sudo apt-get install libc6
 sudo apt-get install libnlopt-dev
 ```
 
-Then, for all the operating systems, ADViSELipidomics can be installed typing the following code in the RStudio console:
+Then, for all the operating systems, ADViSELipidomics can be installed by typing the following code in the RStudio console:
 
 ``` r
 if(!require("devtools")){
