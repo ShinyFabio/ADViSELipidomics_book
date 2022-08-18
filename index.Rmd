@@ -19,7 +19,7 @@ This is the documentation of the ADViSELipidomics package. ADViSELipidomics is a
 
 The PDF version of this user manual can be downloaded from here:
 
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [ADViSELipidomics_book.xlsx](https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/docs/ADViSELipidomics_book.pdf)
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/download.svg" width="20" height="20"> [ADViSELipidomics_book.pdf](https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/docs/ADViSELipidomics_book.pdf)
 
 
 If you use **ADViSELipidomics** in your publications, we appreciate if you can cite:
