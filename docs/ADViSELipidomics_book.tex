@@ -1,0 +1,663 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={ADViSELipidomics user manual},
+  pdfauthor={Fabio Della Rocca},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{ADViSELipidomics user manual}
+\author{Fabio Della Rocca}
+\date{2022-08-24}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{about}{%
+\chapter{About}\label{about}}
+
+This is the documentation of the ADViSELipidomics package. ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization of lipidomics data. It copes with the outputs from LipidSearch and LIQUID for lipid identification and quantification, and with data available from the Metabolomics Workbench. ADViSELipidomics extracts information by parsing lipid species (using LIPID MAPS classification) and, together with information available on the samples, allows performing several exploratory and statistical analyses. In the presence of internal lipid standards in the experiment, ADViSELipidomics can normalize the data matrix, providing absolute values of concentration per lipid and sample. Moreover, it allows the identification of differentially abundant lipids in simple and complex experimental designs, dealing with batch effect correction.
+
+The PDF version of this user manual can be downloaded from here:
+
+\href{https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/docs/ADViSELipidomics_book.pdf}{ADViSELipidomics\_book.pdf}
+
+If you use \textbf{ADViSELipidomics} in your publications, we appreciate if you can cite:
+
+E. Del Prete \emph{et al.} (2022) ADViSELipidomics: a workflow for analyzing lipidomics data DOI: \ldots\ldots\ldots\ldots{}
+
+\hypertarget{install}{%
+\chapter{Install}\label{install}}
+
+ADViSELipidomics is a stand-alone Shiny application developed in RStudio IDE (RStudio \textgreater{} 1.4) and implemented using the R language (R \textgreater{} 4.0), available at the following GitHub page: \url{https://github.com/ShinyFabio/ADViSELipidomics}. ADViSELipidomics is multi-platform. We tested its functionalities on the main operating systems: Windows 10, Windows 11, macOS 12, Ubuntu 18, and Ubuntu 20.
+The user must first install R (\url{https://www.r-project.org}) and R studio (\url{https://www.rstudio.com}), if not yet available. Then, before installing ADViSELipidomics, the user might need to perform a few supplementary steps that depend on the operating systems:
+
+\begin{itemize}
+\item
+  \textbf{Windows} Install Rtools, a collection of tools necessary for building R packages in Windows, available at the following link: \url{https://cran.r-project.org/bin/windows/Rtools}
+\item
+  \textbf{MacOS} The following code should be written in the console:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{brew install imagemagick}\SpecialCharTok{@}\DecValTok{6}
+\NormalTok{brew install cairo}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Ubuntu} The following code should be written in the console:
+\end{itemize}
+
+If you are on Ubuntu run the following codes in the console:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sudo apt install build}\SpecialCharTok{{-}}\NormalTok{essential libcurl4}\SpecialCharTok{{-}}\NormalTok{gnutls}\SpecialCharTok{{-}}\NormalTok{dev libxml2}\SpecialCharTok{{-}}\NormalTok{dev libssl}\SpecialCharTok{{-}}\NormalTok{dev}
+\NormalTok{sudo apt}\SpecialCharTok{{-}}\NormalTok{get install libcairo2}\SpecialCharTok{{-}}\NormalTok{dev}
+\NormalTok{sudo apt}\SpecialCharTok{{-}}\NormalTok{get install libxt}\SpecialCharTok{{-}}\NormalTok{dev}
+\NormalTok{sudo apt install libmagick}\SpecialCharTok{++{-}}\NormalTok{dev}
+\NormalTok{sudo apt}\SpecialCharTok{{-}}\NormalTok{get install libc6}
+\NormalTok{sudo apt}\SpecialCharTok{{-}}\NormalTok{get install libnlopt}\SpecialCharTok{{-}}\NormalTok{dev}
+\end{Highlighting}
+\end{Shaded}
+
+Then, for all the operating systems, ADViSELipidomics can be installed by typing the following code in the RStudio console:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(}\StringTok{"devtools"}\NormalTok{))\{}
+  \FunctionTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{)}
+\NormalTok{\}}
+\FunctionTok{library}\NormalTok{(devtools)}
+\FunctionTok{install\_github}\NormalTok{(}\StringTok{"ShinyFabio/ADViSELipidomics"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+We kindly suggest updating all the R packages requested during the installation process of ADViSELipidomics Shiny application. Be careful that if you need to install many packages and you decide to use compilation, the process could take a lot depending on your hardware and operating system.
+Finally to execute ADViSELipidomics the user can type the following code in the RStudio console:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ADViSELipidomics)}
+\FunctionTok{run\_ADViSELipidomics}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{NOTE}\\
+Depending on the screen size and especially the resolution of your monitor, ADViSELipidomics interface can be a bit different from how it was thought and built. Try to reduce or increment the zoom using \textbf{Ctrl +}/\textbf{Ctrl -} for Windows users or \textbf{Command +}/\textbf{Command -} for Mac users.
+
+Finally, when a new ADViSELipidomics version is released, it can be updated with the same code for the installation.
+
+\hypertarget{inputdata}{%
+\chapter{Input Data}\label{inputdata}}
+
+ADViSELipidomics allows the user to import files concerning different types of data:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{LipidSearch} or \textbf{LIQUID.} ADViSELipidomics deals with the data files containing information on chromatographic peak area or peak intensity per lipid, obtained as output from external software for identifying and quantifying lipids (ADViSELipidomics currently supports the output formats from LipidSearch or LIQUID). Moreover, it requires the Target File with details on samples (such as treatments or biological replicates), and the Internal Reference File with bounds for the filtering step in the following modules. ADViSELipidomics shows a quality plot based on the sum of chromatographic peak area per sample (or replicate). In the case of LipidSearch output associated with internal lipid standards, ADViSELipidomics also requires all the Calibration Files for the construction of the calibration curves.
+\item
+  \textbf{Metabolomics Workbench.} ADViSELipidomics can download in real-time suitable selected lipidomic experiments from the online repository;
+\item
+  \textbf{Excel.} The user can upload two Excel files: the data matrix and the Target File;
+\item
+  \textbf{SummarizedExperiment.} The user can upload a SummarizedExperiment R object (SE), with several types of information (data matrix, information on lipids, information on samples, metadata if available).
+\end{itemize}
+
+Hence, as can be seen, ADViSELipidomics requires different files that may change between the various data types. To sum up, here is a list with all the required files for each data type:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{LipidSearch with Internal Standard lipid:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Target file (.xlsx)
+  \item
+    Internal Reference file (.xlxs)
+  \item
+    Data files coming from LipidSearch related to your samples (.txt)
+  \item
+    Calibration File for deuterated (.xlsx)
+  \item
+    Calibration File for nonlabeled (.xlsx)
+  \item
+    Concentration files coming from LipidSearch related to the internal standard (.txt)
+  \end{itemize}
+\item
+  \textbf{LipidSearch without Internal Standard lipid:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Target file (.xlsx)
+  \item
+    Internal Reference file (.xlxs)
+  \item
+    Data files coming from LipidSearch related to your samples (.txt)
+  \end{itemize}
+\item
+  \textbf{LIQUID}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Target file (.xlsx)
+  \item
+    Internal Reference file (.xlxs)
+  \item
+    Output coming from LIQUID related to your samples(.tsv)
+  \end{itemize}
+\item
+  \textbf{User's Excel File}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Target file (.xlsx)
+  \item
+    Data Matrix File (.xlsx)
+  \end{itemize}
+\item
+  \textbf{SummarizedExperiment}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    SummarizedExperiment object (.rds)
+  \end{itemize}
+\end{itemize}
+
+For \textbf{Metabolomics Workbench} you don not need to import anything, just choose the Metabolomics Workbench ID study.
+
+Before running ADViSELipidomics, make sure that you have all the required files and that they are compiled properly. Apart from the output files from LipidSearch and LIQUID, ADViSELipidomics requires that the Excel files have a given structure with some mandatory columns. Here we provide a guide to the creation of these Excel files.
+
+\hypertarget{sec21}{%
+\section{Data files (LipidSearch or LIQUID)}\label{sec21}}
+
+The output of LipidSearch and LIQUID are some text files containing information on chromatographic peak area or peak intensity per lipid. If your data come from \textbf{LipidSearch}, you should have a deuterated file and a non-labeled file for each sample (or replicate). The extension of these files should be .txt. ADViSELIpidomics accepts files from LipidSearch version 4.2.29. If your data come from \textbf{LIQUID} you can have a positive and a negative file (with a .tsv extension). In any case, put your data file in a folder and rename each file with your sample id in a proper way.
+
+\textbf{Example:}\\
+Your sample is called ``AF-1CM'' and you have two technical replicates. Then, depending on the output software, the name of the data files should be:
+
+\begin{itemize}
+\tightlist
+\item
+  for LipidSearch: ``AF-1C-M\_deuterated\_1.txt'', ``AF-1C-M\_nonlabeled\_1.txt'' and ``AF-1C-M\_deuterated\_2.txt'' and ``AF-1C-M\_nonlabeled\_2.txt''
+\item
+  for LIQUID: ``AF-1C-M\_positive\_1.tsv'', ``AF-1C-M\_negative\_1.tsv'' and ``AF-1C-M\_positive\_2.tsv'', ``AF-1C-M\_negative\_2.tsv''
+\end{itemize}
+
+The last two characters (e.g.~``\_1'') refer to the technical replicate. If you don not have technical replicates just remove these two last characters (so for example in the case of LipidSearch you should have ``AF-1C-M\_deuterated.txt'' and ``AF-1C-M\_nonlabeled.txt'').
+
+\textbf{NOTE}\\
+In the choice of your sample name, it's better to avoid special characters and \textbf{DO NOT use underscores (\_)} . This character is used by ADViSELipidomics to split the file name into three parts: the sample name, the type of file (deuterated/nonlabeled or positive/negative), and the technical replicate as shown in the following picture:
+
+\includegraphics[width=1\linewidth]{images/notation_files}
+
+For example, a bad name could be ``Blood\_bag\_deuterated\_1.txt'', while a good name is ``Blood-bag\_deuterated\_1.txt''.
+
+\hypertarget{sec22}{%
+\section{Target File (LipidSearch, LIQUID, and User's Excel File)}\label{sec22}}
+
+The Target File is an Excel file that contains all the information about your samples. It is the most important file since it is used for LipidSearch import, LIQUID import, and User's Excel File import. This file requires some mandatory columns that have to be filled with some criteria:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{SampleID (LipidSearch, LIQUID, and User's Excel)} this column contains the ID of each sample. To prevent errors, the best way to write the IDs is: ``samplename\_1'' where in ``samplename'' you can write your sample name and ``\_1'' represents the identification for the technical replicate. If your experiment does not have technical replicates, you can simply write ``samplename''. A good SampleID could be ``AF-1C\_1'' if technical replicates are present, or ``AF-1C'' if not. A bad name could be ``AF\_1C\_1'' (with another underscore).
+\item
+  \textbf{File\_name (LipidSearch, LIQUID)} this column contains the name of the data files coming from LipidSearch or LIQUID. In both cases, for each sample there are two different files. In LipidSearch you have a ``deuterated'' and a ``nonlabeled'' file, while in LIQUID you have a ``positive'' and a ``negative'' file. Depending on your data type, write both file names in the corresponding cell separated by a \textbf{semicolon ``;''} without any space.
+\item
+  \textbf{Norm\_factor (LipidSearch, LIQUID - optional)} If you need to normalize your data by a normalization factor, you can add this column and write a number (be careful with decimal points) for each sample. If it is not present, data will not be normalized.
+\end{itemize}
+
+The picture below shows a Target File example where the mandatory columns are enlightened in yellow and the optional column in green. You can fill the Target File with any other informative column, just try to avoid special characters like \textbackslash\^{}\$?*/\textbar+(){[}{]}-\{\} and whitespace. You can use \textbf{\_} instead of whitespace. For example, a column ``Bio\_replicate'' may contain values like ``BD1'' or ``BD\_1'' but not ``BD-1'' (Differential Analysis does not work if there are ``-'').
+
+\textbf{NOTE}\\
+If your Target File does not contain at least one informative column about the samples (e.g.~Product, Model\_type, etc.), you can not perform any exploratory or statistical analysis.
+
+\includegraphics[width=1\linewidth]{images/target_file_example}
+
+The example target file can be downloaded from here:
+
+\href{https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Targetfile_Lipidomics_example.xlsx}{Targetfile\_Lipidomics.xlsx}
+
+\hypertarget{sec23}{%
+\section{Internal Reference File (LipidSearch, LIQUID)}\label{sec23}}
+
+In LipidSearch and LIQUID option, ADViSELipidomics requires also another Excel file here called Internal Reference File which contains the list of the Internal Standard lipids defined per class and adduct, upper/lower bounds for the number of carbon atoms, upper/lower bounds for the number of double bonds, nominal standard concentration, and upper/lower bounds for the concentration linearity in the calibration curves. This file has many mandatory columns that depend both on the external software (LipidSearch, LIQUID) and the presence of internal standards (only for LipidSearch).
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{LipidSearch}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Class} lipid class of interest according to the nomenclature of LipidSearch (e.g.~\emph{DG} )
+  \item
+    \textbf{Ion} the ion of interest written according to the nomenclature of LipidSearch(e.g.~\emph{M-H} )
+  \item
+    \textbf{MinRt} minimum retention time of the class (numeric)
+  \item
+    \textbf{MaxRt} maximum retention time of the class (numeric)
+  \item
+    \textbf{InternalStandardLipidIon} name of each internal lipid standard according to the \textbf{nomenclature of LipidSearch*} (e.g.~\emph{Cer(d18:1\_17:0)-H} )
+  \item
+    \textbf{MinLinearity} minimum value for the range of linearity in the calibration curves. (numeric) ONLY IF YOU USE INTERNAL STANDARD
+  \item
+    \textbf{MaxLinearity} maximum value for the range of linearity in the calibration curves. (numeric) ONLY IF YOU USE INTERNAL STANDARD
+  \item
+    \textbf{NominalStdConcentration} concentration of each internal lipid standard initially spiked into the sample (numeric) ONLY IF YOU USE INTERNAL STANDARD
+  \end{itemize}
+\end{itemize}
+
+*\textbf{nomenclature of LipidSearch:} LipidSearch nomenclature is very similar to Lipid Maps nomenclature except for the use of underscore instead of backslash between different stereospecific numbering (sn) and the absence of the double-bond geometry. An example of the required nomenclature can be seen in the picture below.
+
+\includegraphics[width=1\linewidth]{images/nomenclature}
+
+The picture below shows an Internal Reference File example in the case of LipidSearch and the presence of Internal Standards. In yellow are the mandatory columns, and in green the columns needed only in the presence of Internal Standards. The ``Unit\_measure'' column is not used but can be helpful to check that each standard concentration has the same unit of measure. If you have different units of measure, convert them to the same.
+
+\includegraphics[width=1\linewidth]{images/internal_reference_example}
+
+The Internal Reference File example for the LipidSearch with Internal Standards option can be downloaded from here:
+
+\href{https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Internal_Reference_file_LipidSearch_withIS.xlsx}{Internal\_Reference\_file\_LipidSearch\_withIS.xlsx}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{LIQUID}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Class} lipid class of interest according to the nomenclature of LIQUID (e.g.~\emph{DG} )
+  \item
+    \textbf{Adduct} the ion of interested written according to the nomenclature of LIQUID (e.g.~\emph{{[}M-H{]}+} )
+  \item
+    \textbf{MinRt} minimum retention time of the class (numeric)
+  \item
+    \textbf{MaxRt} maximum retention time of the class (numeric)
+  \end{itemize}
+\end{itemize}
+
+The picture below shows an Internal Reference File example in the case of LIQUID. In yellow are the mandatory columns.
+
+\includegraphics[width=1\linewidth]{images/int_reference_LIQUID}
+
+The Internal Reference File example for the LIQUID option can be downloaded from here:
+
+\href{https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Internal_Reference_file_LIQUID.xlsx}{Internal\_Reference\_file\_LIQUID.xlsx}
+
+\hypertarget{sec24}{%
+\section{Calibration Files (LipidSearch with Internal Standards)}\label{sec24}}
+
+In the case of LipidSearch, if you have Internal Standard, you can choose to use them or not. In this case, you need to upload also some Calibration Files which are two Excel Files, and the data files coming from LipidSearch (here called concentration files). The concentration files are the same .txt files described in Section \ref{sec21}. Please, refer to that Section if you need more information about how to rename the files. Be sure that all the concentration files are inside a folder and that they aren not mixed with the data files of Section \ref{sec21}.
+Next, ADViSELipidomics, requires two Calibration Excel files, one for the Non-labeled and the other for the Deuterated. They share the same structure:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Concentration (ng/mL)} the concentration of the standard (numeric)
+\item
+  \textbf{Class} the lipid classes of interest separated by a comma \textbf{,} (e.g.~\emph{PG,PS,PI,PE,SM,PC,TG,DG} )
+\item
+  \textbf{Name} the name of the data files coming from LipidSearch. They have to match perfectly with the file names. If you have technical replicates, separate them by a \textbf{semicolon ``;''} without any space. (for example in the deuterated: \emph{ISMix\_5ugmL\_deuterated\_1.txt;ISMix\_5ugmL\_deuterated\_2.txt;ISMix\_5ugmL\_deuterated\_3.txt})
+\end{itemize}
+
+The picture below shows an example of a Calibration Excel file for the deuterated.
+
+\includegraphics[width=1\linewidth]{images/calibration_deut_example}
+
+An example of the Calibration Deuterated and Calibration Nonlabeled Excel files can be downloaded here:
+
+\href{https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Calibration_Deuterated.xlsx}{Calibration\_Deuterated.xlsx}
+
+\href{https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Calibration_NonLabeled.xlsx}{Calibration\_NonLabeled.xlsx}
+
+\hypertarget{sec25}{%
+\section{User's Excel File}\label{sec25}}
+
+If you already have a matrix file containing the abundance for each lipid, you need just two Excel files: a Target File and a Data Matrix File. Here the Target File has only one mandatory column, the SampleID. The Data Matrix (.xlsx file) must have the list of the lipids in the first column, which must be called \emph{``Lipids''}, and then the samples (or replicates) in the following columns, with the column names that are the same of the \emph{SampleID} from the Target File. It is not necessary that the matrix is full (i.e.~without missing values) since after uploaded, it is possible to filter and impute NAs. The picture below shows an example of a Data Matrix Excel file.
+
+\includegraphics[width=1\linewidth]{images/excel_file_example}
+
+\textbf{NOTE}
+The column names in the data matrix must follow the same SampleID rules described in Section \ref{sec22}.
+
+An example of the Data Matrix can be downloaded from here:
+
+\href{https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Excel_Data_Matrix.xlsx}{Excel\_Data\_Matrix.xlsx}
+
+\hypertarget{sec26}{%
+\section{SummarizedExperiment}\label{sec26}}
+
+ADViSELipidomics allows the user to load a SummarizedExperiment (SE) object, saved as a .rds file, already prepared or previously downloaded after running ADViSELipidomics. Since the required SE object has a complex structure, we do not recommend uploading a SE object that was not downloaded from ADViSELipidomics. The idea behind this option was that the user can save the SE object after the preprocessing steps and performs the exploratory and statistical analysis at another moment.
+
+\hypertarget{sec27}{%
+\section{Metabolomics Workbench}\label{sec27}}
+
+In the case of Metabolomics Workbench, you don not need to import anything, because ADViSELipidomics downloads a selected Metabolomics Workbench experiment and converts it into an SE object.
+
+\hypertarget{guide}{%
+\chapter{Guide}\label{guide}}
+
+ADViSELipidomics has a graphical user interface (GUI) implemented using the shiny and golem R packages. It has five main sections: Home, Data Import \& Preprocessing, SumExp Visualization, Exploratory Analysis, and Statistical Analysis. Each section is accessible from a sidemenu on the left.
+
+\hypertarget{sec31}{%
+\section{Home section}\label{sec31}}
+
+The Home section includes general information about ADViSELipidomics as the citation, the link to the GitHub page, and the link to this manual. From the ``Start!'' button, it is possible to go to the following section where the user can upload the lipidomic data.
+
+\hypertarget{sec32}{%
+\section{Data Import \& Preprocessing}\label{sec32}}
+
+This section allows to import and process lipidomic data from various sources.
+When you open this section for the first time after launch, a message box appears and asks you to write your name and your company. This information will be stored in the final output of ADViSELipidomics. By default, if you click on ``Run'' the User will be \emph{``Name''} and the Company will be \emph{``Company''}.
+The picture below shows the Data Import \& Preprocessing section (with the different parts enlightened with red rectangles).
+
+\includegraphics[width=1\linewidth]{images/module_inpute}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Rectangle A} allows the user to choose between LipidSearch, LIQUID, Excel files, Summarized Experiment, and Metabolomics Workbench. Moreover, it is also possible to select between experiments with or without internal standards (this option is available only for LipidSearch import).
+\item
+  \textbf{Rectangle B} shows three different steps for Importing \& Filtering: importing data, storing, and reading data, filtering data.
+\item
+  \textbf{Rectangle C} shows five additional steps for Calibration: importing calibration files, storing calibration files, selecting the folder for the results, selecting calibration options, application of recovery.
+\item
+  \textbf{Rectangle D} shows two different steps for Filtering and Missing Data imputation and creating the SummarizedExperiment object. Note that the layout of the Data Import \& Preprocessing section and the required files depends on the type of input data format choosen by the user. Go to Chapter \ref{inputdata} if you need help gathering all the required files.
+\end{itemize}
+
+Since the option LipidSearch output with Internal Standard (IS) has the largest number of required files and steps, here we provide a complete guide for this case. Anyway, this guide applies also to LipidSearch without IS and to LIQUID: in these cases, the only difference is that there isn't the CALIBRATION module (Section \ref{sec322}).
+
+\hypertarget{sec321}{%
+\subsection{LipidSearch (IS) EXAMPLE - IMPORTING \& FILTERING module}\label{sec321}}
+
+The first module is the IMPORTING \& FILTERING module, where the user can upload the Target File, the Internal Reference File, and the Data files from LipidSearch.
+
+\begin{center}\includegraphics[width=0.6\linewidth]{images/input_step} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Step 1.} The first files that you must import are the Target File and the Internal Reference File (Rectangle A, steps 1 and 2). Next to each of them there is a button (yellow squared rectangle) that allows you to edit the Excel files. You can filter the rows by one or more conditions, select only the needed columns, and download the edited data. To apply the editing, you have to enable the button next to the download button and click on the ``Done'' button (right-top corner). Anyway, a help button guides you through the editing options.
+\item
+  \textbf{Step 2.} Here, you choose the folder containing the data files coming from LipidSearch (only the data files related to the samples and NOT to the IS). After selecting the folder, click on the ``Read Data'' button, and ADViSELipidomics will start reading all the data files. A progress bar shows the percentage of completion. When the reading process is completed, you can perform a quality check on the area of each sample by clicking the ``Quality check'' button.
+\item
+  \textbf{Step 3.} Finally, here you can filter non-informative lipids based on retention time in the range, number of carbon atoms in the range, even number of carbon atoms, number of double bonds in the range, duplicated lipids. The two sliders allows you to choose the range for the carbon number and the double bound number. The other filters come from the Internal Reference File. If there are duplicated lipids (same m/z values for lipid peaks), ADViSELipidomics takes only the lipids with the maximum peak area. The ``Filter Data'' button starts this process. In the end, you can check the filtered data for each sample.
+\end{itemize}
+
+\hypertarget{sec322}{%
+\subsection{LipidSearch (IS) EXAMPLE - CALIBRATION module}\label{sec322}}
+
+If the previous module is completed, the CALIBRATION module appears next to it. The Calibration module creates the calibration curves and the calibration matrix. It uses the Internal Lipid Standards reported in the Internal Reference file, and the correspondence between the Concentration Files and the lipid classes declared in the Calibration File. This module extracts the relationships between peaks area and concentration values for each internal lipid standard, constructing the calibration curves with a linear model and plotting them. The linear regression model can be classical or robust, with zero or non-zero intercept. Finally, the calibration matrix resumes all the points from the calibration curves. After the calibration process, ADViSELipidomics stores slope and intercept values for the recovery module.
+As already stated, this module appears only if you are using LipidSearch output with Internal Standard (and you clicked on ``Yes'' in the radiobutton that asks you \emph{``Do you have internal standards?''}). In this module, you need two Calibration Files (.xlsx, see Section \ref{sec24}) and the Concentration files coming from LipidSearch related to the internal standard (.txt, see Section \ref{sec21}).
+
+\begin{center}\includegraphics[width=0.6\linewidth]{images/calibration_step} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Step. 1} Here, you can upload the Calibration Files (.xlsx) for both Deuterated and Nonlabeled. This step is remarkably similar to Step 1 of the IMPORTING \& FILTERING module. You can find further information about these files in Section \ref{sec24}.
+\item
+  \textbf{Step. 2} Select the folder containing the Concentration files coming from LipidSearch and click on ``Read the concentration files''. Also, this step is very similar to step 2 of the previous module.
+\item
+  \textbf{Step. 3} Here, you can select the folder where saving the output from LipidSearch. ADViSELipidomics creates for you the folder structure.
+\item
+  \textbf{Step. 4} In this step you can choose some calibration options and visualize the calibration plot for each standard.
+\item
+  \textbf{Step. 5.} Finally, you can apply the recovery percentage to the concentration values for each lipid, considering the Internal Lipid Standards as lipid class reference. This normalization provides absolute concentration values for the lipids, and the resulting concentration matrix can be seen by clicking on the ``Check concentration matrix'' button. Here it's possible also to visualize the missing values(if applicable). Moreover, from the ``Download LOL'' button you can download a table containing all the lipids filtered because outside the linearity range.
+\end{itemize}
+
+\hypertarget{sec323}{%
+\subsection{LipidSearch (IS) EXAMPLE - MISSING DATA \& SUMMARIZED EXPERIMENT}\label{sec323}}
+
+This is the last module of the preprocessing menu where you can filter and impute missing values (NAs), build the SummarizedExperiment object, and download it.
+
+\begin{center}\includegraphics[width=0.6\linewidth]{images/filtering_step} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Step 1.} In the first step ADViSELipidomics computes the percentage of NAs, for each lipid (matrix rows) and each sample (matrix columns). Second, it allows retaining only lipids and/or samples with a percentage of missingness below thresholds chosen using the sliders. For example, if you set \emph{Max missing data percentage allowable on lipids} to 0.3 \emph{Max missing data percentage allowable on samples} to 0.6 that means that only lipids (rows) with less than 30\% of NAs and samples (columns) with less than 60\% of NAs are stored. After that, by clicking on the ``Check filtered NAs'' button, ADViSELipidomics provides the missing data distributions and the data dimension before and after filtering NAs.
+\item
+  \textbf{Step 2.} Next, you can impute the remaining NAs with different imputation methods, three Not Model-Based (mean, median, and knn) and one Model-Based (irmi).
+\item
+  \textbf{Step 3.} In the final step, ADViSELipidomics build the SummarizedExperiment object and download it. By clicking on the ``See the results'' you will be redirected to the next menu, SumExp Visualization.
+\end{itemize}
+
+\hypertarget{sec33}{%
+\section{SumExp Visualization}\label{sec33}}
+
+Once you ended successfully the Preprocessing module, the first thing that you can do is check the just created SummarizedExperiment (SE) object. This can be done in the SumExp Visualization menu. The complex structure of the SE object can be explored by a red gear icon where you can choose what part of the SE object should be shown and summarise the data (if you have technical replicates).
+
+\includegraphics[width=1\linewidth]{images/sumexp}
+
+The picture above shows the rowData part of the SE object containing the annotation on lipids. Each lipid in the ``Lipids'' contains a hyperlink to the SwissLipids online repository to provide structural, biological, and analytic details.
+
+\hypertarget{sec34}{%
+\section{Exploratory Analysis}\label{sec34}}
+
+The Exploratory Analysis menu includes three sub-menus: Plots, Clustering, and Dimensionality Reduction.
+
+\hypertarget{sec341}{%
+\subsection{Plots}\label{sec341}}
+
+This sub-menu allows the user to create different types of plots to show the trend and behavior of data, exploring them from lipid and/or sample points of view. It has four panels: Lipids, Scatterplot, Heatmap, and Quality plots.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Lipid plots.} It is possible to 1) represent the lipid class distribution (counts of lipids per class) with a pie chart, boxplot, and spider plot; 2) visualize the percentage proportion of lipid class for each sample using a barplot, 3) compare the lipid species abundance for each condition; 4) inspect the abundance of a lipid, selected by the user, in relationship with a feature from the target file (e.g., treatment) using boxplots;
+\item
+  \textbf{Scatterplots.} It is possible to visualize the relationship between lipid abundance in two samples;
+\item
+  \textbf{Heatmap.} It provides a highly customizable heatmap to show possible clusters among lipids or samples. The user can select many parameters: a) row annotation with the feature from the target file, b) column annotation with the information from lipids parsing, c) dendrograms for lipids and/or samples, d) distance function (Euclidean, maximum, Canberra), e) clustering method (complete, average, median, Ward); f) number of clusters for lipids and/or samples. The user can select an area in the overall heatmap and have a detailed zoom of the area itself, with associated information;
+\item
+  \textbf{Quality plots.} It provides different typologies of plots (barplot, boxplot, density plot) to show the total amount of abundance (logarithmic scale) per sample, considering as reference a feature from the target file, to show possible unexpected behavior among samples or replicates for the same sample.
+\end{itemize}
+
+The picture below shows an example of the Lipid class proportion plot.
+
+\includegraphics[width=1\linewidth]{images/taxabarplot}
+
+\hypertarget{sec342}{%
+\subsection{Clustering}\label{sec342}}
+
+The Clustering sub-menu allows the user to cluster the data by lipids or samples. The user can choose the number of clusters and the clustering method among the following algorithms: hierarchical clustering (using single, complete, Ward as linkage function) or partitioning clustering (k-means, PAM, Clara). If you choose a partitioning clustering, ADViSELipidomics performs before a PCA. Additional plots, such as the silhouette plot, can suggest the number of clusters to use.
+
+\includegraphics[width=1\linewidth]{images/clustering}
+
+\hypertarget{sec343}{%
+\subsection{Dimensionality Reduction}\label{sec343}}
+
+The Dimensionality Reduction sub-menu allows the user to choose between unsupervised (PCA) and supervised approaches (PLS-DA, sPLS-DA) to represent the data in a two or three-dimensional space. It contains three panels PCA, PLS-DA, and sPLS-DA.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{PCA.} ADViSELipidomics computes the Principal Component Analysis (PCA), showing the results with different plots: a) 2D plot, b) biplot, c) scree plot, d) loadings plot, e) 3D plot. The user can highlight the features from the target file with different colors and select the number of components to use for the loading plots.
+\item
+  \textbf{PLS-DA.} ADViSELipidomics computes the Partial Least Square - Discriminant Analysis, showing the results with a 2D plot and a Correlation Circle plot. The user can select the group variable and the number of components for the computation. The 2D plot can be customized from the red gear icon. Furthermore, ADViSELipidomics can perform a Cross-Validation to identify the best number of components. It may take a while.
+\item
+  \textbf{sPLS-DA.} ADViSELipidomics can compute also the sparse version of the PLS-DA. The panel is very similar to the PLS-DA panel, but since it's a sparse version, it is possible to choose the number of variables to select on each component (called ``KeepX''). Still here ADViSELipidomics can perform a Cross-Validation that helps the user to choose the best number of components and the best ``KeepX''.
+\end{itemize}
+
+Here's an example of a 2D plot for the PCA.
+
+\includegraphics[width=1\linewidth]{images/pca}
+
+\hypertarget{sec35}{%
+\section{Statistical Analysis}\label{sec35}}
+
+The Statistical Analysis menu includes two sub-menus: Differential Analysis and Enrichment Analysis.
+
+\hypertarget{sec351}{%
+\subsection{Differential Analysis}\label{sec351}}
+
+The Differential Analysis sub-menu applies statistical algorithms to identify lipids with a different abundance among samples associated with experimental conditions (i.e., treatment versus control). It has two panels: \textbf{Build DA} and \textbf{Comparisons}. The first allows the user to build and run the differential analysis, while the second shows the ``differential expressed'' lipids with a Venn Diagram and an Upset plot.
+
+The picture below shows the first panel, \textbf{Buil DA}, with the different parts enlightened in red rectangles.
+
+\includegraphics[width=1\linewidth]{images/DA}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Rectangle A.} Here, you can select between one of the two SE objects obtained from the previous steps (i.e., the one with the lipid abundance of all samples or where the technical replicates are averaged). It is possible to normalize the data matrix by a scaling factor at this stage (``Normalization between replicates or samples''). Moreover, when a data matrix has technical replicates, you can even incorporate the replicate effect in the model by checking the ``Replicates effect'' box.
+\item
+  \textbf{Rectangle B.} Here, you can build your experimental designs. An ADViSELipidomics complex design can include up to two experimental conditions and at most two variables to consider as batch effects. First, you can select a primary variable, and with the plus button, you can add a second variable. Next, you can decide to consider the batch effect by choosing up to two batch variables. More in detail, ADViSELipidomics copes with the batch effects by either fitting the model with the batch variables or removing the batch effect before fitting the model. To handle the batch effect, ADViSELipidomics uses the removeBatchEffect function from the limma package or the ComBat function (parametric or non-parametric method) from the SVA package. Finally, with the ``Write contrasts'' button, it opens a box where you can generate the contrast list. This functionality works with up to two total variables (e.g.~primary variable + secondary variable (``Batch type'' set to ``remove'') or primary variable + primary batch variable with ``Batch type'' set to ``fit'').
+\item
+  \textbf{Rectangle C.} Here, you can select a threshold for the adjusted p-values, and a method for the \emph{decideTests} function (limma package) used to identify ``differentially expressed'' lipids. Finally, click on the ``Run DA'' button to run the differential analysis. You can also check and download a table of results (TopTable).
+\item
+  \textbf{Rectangle D.} In this rectangle there are some plot options, as the choice of the contrast, the threshold for the logFC, and the possibility of adding another plot. There are two different plots: a volcano plot and a MA plot, both interactive where you can change the fill variable and add labels to lipids of interest.
+\end{itemize}
+
+After ADViSELipidomics performed the DA, you can go to the \textbf{Comparisons} panel to visualize the ``differential expressed'' lipids and perform pairwise comparisons between different contrasts using the Venn diagram and the Upset plot. Finally, it reports the list of common lipids in tabular form. These two plots are available only with at least two contrasts.
+
+\includegraphics[width=1\linewidth]{images/venn}
+
+\hypertarget{sec352}{%
+\subsection{Enrichment Analysis}\label{sec352}}
+
+The Enrichment Analysis sub-menu allows for building different lipid sets from the chemical features of the lipids: i.e., lipid classes, total chain length (the sum of all carbon atoms in the tails), total unsaturation (the sum of all the double bonds in the tails). After defining a ranking for the differential abundant lipids (i.e., ranking considering logarithmic Fold Change, p-value, adjusted p-value, or B statistic), it identifies enriched sets of lipids using a permutation test. To achieve a robust result, it was necessary to perform a few million permutations, hence this process may take a while. Since Enrichment Analysis takes as input the differential analysis results, you need first to run the last one.
+
+\includegraphics[width=1\linewidth]{images/enrichment}
+
+\hypertarget{filestudy}{%
+\chapter{Files Case Study 1}\label{filestudy}}
+
+If you want to test the software with a LipidSearch output, here we provide the files used in the Case Study 1 as described in the supplementary to our paper {[}\ldots add link{]}.
+
+\href{https://github.com/ShinyFabio/ADViSELipidomics_book/raw/main/data_example/Case_Study_\%231.zip}{Case\_Study\_1.zip}
+
+Before use, please extract the files from the archive. Since this experiment uses internal standards, you can follow the example in Section \ref{sec32}.
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}
