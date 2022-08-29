@@ -12,7 +12,8 @@ This section allows to import and process lipidomic data from various sources.
 When you open this section for the first time after launch, a message box appears and asks you to write your name and your company. This information will be stored in the final output of ADViSELipidomics. By default, if you click on "Run" the User will be *"Name"* and the Company will be *"Company"*. 
 The picture below shows the Data Import & Preprocessing section (with the different parts enlightened with red rectangles). 
 
-<img src="images/module_inpute.png" width="100%" />
+
+\includegraphics[width=1\linewidth]{images/module_inpute} 
 
 
 * **Rectangle A** allows the user to choose between LipidSearch, LIQUID, Excel files, Summarized Experiment, and Metabolomics Workbench. Moreover, it is also possible to select between experiments with or without internal standards (this option is available only for LipidSearch import). 
@@ -26,7 +27,8 @@ Since the option LipidSearch output with Internal Standard (IS) has the largest 
 The first module is the IMPORTING & FILTERING module, where the user can upload the Target File, the Internal Reference File, and the Data files from LipidSearch.
 
 
-<img src="images/input_step.png" width="60%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.6\linewidth]{images/input_step} \end{center}
 
 
 * **Step 1.** The first files that you must import are the Target File and the Internal Reference File (Rectangle A, steps 1 and 2). Next to each of them there is a button (yellow squared rectangle) that allows you to edit the Excel files. You can filter the rows by one or more conditions, select only the needed columns, and download the edited data. To apply the editing, you have to enable the button next to the download button and click on the "Done" button (right-top corner). Anyway, a help button guides you through the editing options.
@@ -37,7 +39,8 @@ The first module is the IMPORTING & FILTERING module, where the user can upload 
 If the previous module is completed, the CALIBRATION module appears next to it. The Calibration module creates the calibration curves and the calibration matrix. It uses the Internal Lipid Standards reported in the Internal Reference file, and the correspondence between the Concentration Files and the lipid classes declared in the Calibration File. This module extracts the relationships between peaks area and concentration values for each internal lipid standard, constructing the calibration curves with a linear model and plotting them. The linear regression model can be classical or robust, with zero or non-zero intercept. Finally, the calibration matrix resumes all the points from the calibration curves. After the calibration process, ADViSELipidomics stores slope and intercept values for the recovery module.
 As already stated, this module appears only if you are using LipidSearch output with Internal Standard (and you clicked on "Yes" in the radiobutton that asks you *"Do you have internal standards?"*). In this module, you need two Calibration Files (.xlsx, see Section \@ref(sec24)) and the Concentration files coming from LipidSearch related to the internal standard (.txt, see Section \@ref(sec21)). 
 
-<img src="images/calibration_step.png" width="60%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.6\linewidth]{images/calibration_step} \end{center}
 
 
 * **Step. 1** Here, you can upload the Calibration Files (.xlsx) for both Deuterated and Nonlabeled. This step is remarkably similar to Step 1 of the IMPORTING & FILTERING module. You can find further information about these files in Section \@ref(sec24).
@@ -50,7 +53,8 @@ As already stated, this module appears only if you are using LipidSearch output 
 ### LipidSearch (IS) EXAMPLE - MISSING DATA & SUMMARIZED EXPERIMENT {#sec323}
 This is the last module of the preprocessing menu where you can filter and impute missing values (NAs), build the SummarizedExperiment object, and download it. 
 
-<img src="images/filtering_step.png" width="60%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.6\linewidth]{images/filtering_step} \end{center}
 
 
 * **Step 1.** In the first step ADViSELipidomics computes the percentage of NAs, for each lipid (matrix rows) and each sample (matrix columns). Second, it allows retaining only lipids and/or samples with a percentage of missingness below thresholds chosen using the sliders. For example, if you set *Max missing data percentage allowable on lipids* to 0.3 *Max missing data percentage allowable on samples* to 0.6 that means that only lipids (rows) with less than 30% of NAs and samples (columns) with less than 60% of NAs are stored. After that, by clicking on the "Check filtered NAs" button, ADViSELipidomics provides the missing data distributions and the data dimension before and after filtering NAs. 
@@ -60,7 +64,8 @@ This is the last module of the preprocessing menu where you can filter and imput
 ## SumExp Visualization {#sec33}
 Once you ended successfully the Preprocessing module, the first thing that you can do is check the just created SummarizedExperiment (SE) object. This can be done in the SumExp Visualization menu. The complex structure of the SE object can be explored by a red gear icon where you can choose what part of the SE object should be shown and summarise the data (if you have technical replicates).
 
-<img src="images/sumexp.png" width="100%" />
+
+\includegraphics[width=1\linewidth]{images/sumexp} 
 
 
 The picture above shows the rowData part of the SE object containing the annotation on lipids. Each lipid in the "Lipids" contains a hyperlink to the SwissLipids online repository to provide structural, biological, and analytic details.
@@ -78,14 +83,16 @@ This sub-menu allows the user to create different types of plots to show the tre
 
 The picture below shows an example of the Lipid class proportion plot.
 
-<img src="images/taxabarplot.png" width="100%" />
+
+\includegraphics[width=1\linewidth]{images/taxabarplot} 
 
 
 
 ### Clustering {#sec342}
 The Clustering sub-menu allows the user to cluster the data by lipids or samples. The user can choose the number of clusters and the clustering method among the following algorithms: hierarchical clustering (using single, complete, Ward as linkage function) or partitioning clustering (k-means, PAM, Clara). If you choose a partitioning clustering, ADViSELipidomics performs before a PCA. Additional plots, such as the silhouette plot, can suggest the number of clusters to use.
 
-<img src="images/clustering.png" width="100%" />
+
+\includegraphics[width=1\linewidth]{images/clustering} 
 
 
 
@@ -98,7 +105,8 @@ The Dimensionality Reduction sub-menu allows the user to choose between unsuperv
 
 Here's an example of a 2D plot for the PCA.
 
-<img src="images/pca.png" width="100%" />
+
+\includegraphics[width=1\linewidth]{images/pca} 
 
 
 ## Statistical Analysis {#sec35}
@@ -110,7 +118,8 @@ The Differential Analysis sub-menu applies statistical algorithms to identify li
 
 The picture below shows the first panel, **Buil DA**, with the different parts enlightened in red rectangles.
 
-<img src="images/DA.png" width="100%" />
+
+\includegraphics[width=1\linewidth]{images/DA} 
 
 * **Rectangle A.** Here, you can select between one of the two SE objects obtained from the previous steps (i.e., the one with the lipid abundance of all samples or where the technical replicates are averaged). It is possible to normalize the data matrix by a scaling factor at this stage ("Normalization between replicates or samples"). Moreover, when a data matrix has technical replicates, you can even incorporate the replicate effect in the model by checking the "Replicates effect" box.
 * **Rectangle B.** Here, you can build your experimental designs. An ADViSELipidomics complex design can include up to two experimental conditions and at most two variables to consider as batch effects. First, you can select a primary variable, and with the plus button, you can add a second variable. Next, you can decide to consider the batch effect by choosing up to two batch variables. More in detail, ADViSELipidomics copes with the batch effects by either fitting the model with the batch variables or removing the batch effect before fitting the model. To handle the batch effect, ADViSELipidomics uses the removeBatchEffect function from the limma package or the ComBat function (parametric or non-parametric method) from the SVA package. Finally, with the "Write contrasts" button, it opens a box where you can generate the contrast list. This functionality works with up to two total variables (e.g. primary variable + secondary variable ("Batch type" set to "remove") or primary variable + primary batch variable with "Batch type" set to "fit").
@@ -120,12 +129,14 @@ The picture below shows the first panel, **Buil DA**, with the different parts e
  
 After ADViSELipidomics performed the DA, you can go to the **Comparisons** panel to visualize the "differential expressed" lipids and perform pairwise comparisons between different contrasts using the Venn diagram and the Upset plot. Finally, it reports the list of common lipids in tabular form. These two plots are available only with at least two contrasts.
 
-<img src="images/venn.png" width="100%" />
+
+\includegraphics[width=1\linewidth]{images/venn} 
 
 
 ### Enrichment Analysis {#sec352}
 
 The Enrichment Analysis sub-menu allows for building different lipid sets from the chemical features of the lipids: i.e., lipid classes, total chain length (the sum of all carbon atoms in the tails), total unsaturation (the sum of all the double bonds in the tails). After defining a ranking for the differential abundant lipids (i.e., ranking considering logarithmic Fold Change, p-value, adjusted p-value, or B statistic), it identifies enriched sets of lipids using a permutation test. To achieve a robust result, it was necessary to perform a few million permutations, hence this process may take a while. Since Enrichment Analysis takes as input the differential analysis results, you need first to run the last one.
 
-<img src="images/enrichment.png" width="100%" />
+
+\includegraphics[width=1\linewidth]{images/enrichment} 
 
