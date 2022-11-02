@@ -181,4 +181,4 @@ ADViSELipidomics allows the user to load a SummarizedExperiment (SE) object, sav
 
 ## Metabolomics Workbench {#sec27}
 
-In the case of Metabolomics Workbench, you don not need to import anything, because ADViSELipidomics downloads a selected Metabolomics Workbench experiment and converts it into an SE object.
+In the case of Metabolomics Workbench, you don not need to import anything, because ADViSELipidomics downloads a selected Metabolomics Workbench experiment and converts it into an SE object. Internet connection is required.

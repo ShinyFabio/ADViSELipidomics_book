@@ -7,7 +7,7 @@
 <title>Chapter 2 Install | ADViSELipidomics user manual</title>
 <meta name="author" content="Fabio Della Rocca">
 <meta name="description" content="ADViSELipidomics is a stand-alone Shiny application developed in RStudio IDE (RStudio &gt; 1.4) and implemented using the R language (R &gt; 4.0), available at the following GitHub page:...">
-<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta name="generator" content="bookdown 0.28 with bs4_book()">
 <meta property="og:title" content="Chapter 2 Install | ADViSELipidomics user manual">
 <meta property="og:type" content="book">
 <meta property="og:url" content="your book url like https://shinyfabio.github.io/ADViSELipidomics_book/install.html">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="ADViSELipidomics is a stand-alone Shiny application developed in RStudio IDE (RStudio &gt; 1.4) and implemented using the R language (R &gt; 4.0), available at the following GitHub page:...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -81,18 +81,18 @@ The user must first install R (<a href="https://www.r-project.org" class="uri">h
 <span id="cb2-6"><a href="install.html#cb2-6" aria-hidden="true" tabindex="-1"></a>sudo apt<span class="sc">-</span>get install libnlopt<span class="sc">-</span>dev</span></code></pre></div>
 <p>Then, for all the operating systems, ADViSELipidomics can be installed by typing the following code in the RStudio console:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/">"devtools"</a></span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
-  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
-<span class="op">}</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/">devtools</a></span><span class="op">)</span>
-<span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"ShinyFabio/ADViSELipidomics"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/">"devtools"</a></span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/">devtools</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"ShinyFabio/ADViSELipidomics"</span><span class="op">)</span></span></code></pre></div>
 <p>We kindly suggest updating all the R packages requested during the installation process of ADViSELipidomics Shiny application. Be careful that if you need to install many packages and you decide to use compilation, the process could take a lot depending on your hardware and operating system.
 Finally to execute ADViSELipidomics the user can type the following code in the RStudio console:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://shinyfabio.github.io/ADViSELipidomics/">ADViSELipidomics</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/pkg/ADViSELipidomics/man/run_ADViSELipidomics.html">run_ADViSELipidomics</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://shinyfabio.github.io/ADViSELipidomics/">ADViSELipidomics</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/ADViSELipidomics/man/run_ADViSELipidomics.html">run_ADViSELipidomics</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/circle-exclamation.svg" width="15" height="15"><strong>NOTE</strong><br>
-Depending on the screen size and especially the resolution of your monitor, ADViSELipidomics interface can be a bit different from how it was thought and built. Try to reduce or increment the zoom using <strong>Ctrl +</strong>/<strong>Ctrl -</strong> for Windows users or <strong>Command +</strong>/<strong>Command -</strong> for Mac users.</p>
+Depending on the screen size and especially the resolution of your monitor, ADViSELipidomics interface can be a bit different from how it was thought and built. Try to reduce or increment the zoom using <strong>Ctrl +</strong>/<strong>Ctrl -</strong> for Windows or Linux users, or <strong>Command +</strong>/<strong>Command -</strong> for Mac users.</p>
 <p>Finally, when a new ADViSELipidomics version is released, it can be updated with the same code for the installation.</p>
 
 </div>
@@ -118,7 +118,7 @@ Depending on the screen size and especially the resolution of your monitor, ADVi
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2022-08-29.</p>
+    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2022-11-02.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

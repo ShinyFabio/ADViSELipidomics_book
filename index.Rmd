@@ -24,7 +24,8 @@ The PDF version of this user manual can be downloaded from here:
 
 If you use **ADViSELipidomics** in your publications, we appreciate if you can cite:
 
-E. Del Prete *et al.* (2022) ADViSELipidomics: a workflow for analyzing lipidomics data DOI: ............
+<p>*E. Del Prete et al. (2022) ADViSELipidomics: a workflow for analyzing lipidomics data. Bioinformatics, 2022, 1–3* </p>
+DOI: https://doi.org/10.1109/5.771073
 
 
 ```{r include=FALSE}
