@@ -96,7 +96,7 @@ In LipidSearch and LIQUID option, ADViSELipidomics requires also another Excel f
   - **Ion** the ion of interest written according to the nomenclature of LipidSearch(e.g. *M-H* )
   - **MinRt** minimum retention time of the class (numeric)
   - **MaxRt** maximum retention time of the class (numeric)
-  - **InternalStandardLipidIon** name of each internal lipid standard according to the **nomenclature of LipidSearch\*** (e.g. *Cer(d18:1_17:0)-H* )
+  - **InternalStandardLipidIon** name of each internal lipid standard according to the **nomenclature of LipidSearch\*** (e.g. *Cer(d18:1_17:0)-H* ). It is also possible to use a lipid that doesn't belong to the same lipid class written in the "Class" column. For example, you can use the lipid *PS(18:1D7_15:0)-H* for the PG class.
   - **MinLinearity** minimum value for the range of linearity in the calibration curves. (numeric) ONLY IF YOU USE INTERNAL STANDARD
   - **MaxLinearity** maximum value for the range of linearity in the calibration curves. (numeric) ONLY IF YOU USE INTERNAL STANDARD
   - **NominalStdConcentration** concentration of each internal lipid standard initially spiked into the sample (numeric) ONLY IF YOU USE INTERNAL STANDARD
