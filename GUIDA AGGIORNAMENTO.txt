@@ -1,0 +1,11 @@
+1. verificare che bookdown e tinytex siano installati
+
+2. probabilmente darà un errore che manca xelatex. é possibile che sia perchè mancano file aggiuntivi del pacchetto. Verificare
+lanciando tinytex::tlmgr_update(), se dice che manca tlmgr bisogna installarlo usando:
+tinytex::install_tinytex()
+
+3. Modificare i vari .Rmd (es. 01-intro.Rmd)
+
+4. Andare in BUild in alto a destra,in Build book selezionare prima bs4_book e lanciare e poi farlo con pdf_book
+
+5. Caricare tutto su github

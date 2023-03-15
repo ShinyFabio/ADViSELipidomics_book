@@ -7,7 +7,7 @@
 <title>Chapter 3 Input Data | ADViSELipidomics user manual</title>
 <meta name="author" content="Fabio Della Rocca">
 <meta name="description" content="ADViSELipidomics allows the user to import files concerning different types of data: LipidSearch or LIQUID. ADViSELipidomics deals with the data files containing information on chromatographic...">
-<meta name="generator" content="bookdown 0.28 with bs4_book()">
+<meta name="generator" content="bookdown 0.33 with bs4_book()">
 <meta property="og:title" content="Chapter 3 Input Data | ADViSELipidomics user manual">
 <meta property="og:type" content="book">
 <meta property="og:url" content="your book url like https://shinyfabio.github.io/ADViSELipidomics_book/inputdata.html">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="ADViSELipidomics allows the user to import files concerning different types of data: LipidSearch or LIQUID. ADViSELipidomics deals with the data files containing information on chromatographic...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -217,7 +217,7 @@ Next, ADViSELipidomics, requires two Calibration Excel files, one for the Non-la
 <li>
 <strong>Concentration (ng/mL)</strong> the concentration of the standard (numeric)</li>
 <li>
-<strong>Class</strong> the lipid classes of interest separated by a comma <strong>,</strong> (e.g. <em>PG,PS,PI,PE,SM,PC,TG,DG</em> )</li>
+<strong>Class</strong> the lipid classes of interest separated by a <strong>semicolon “;”</strong> (e.g. <em>PG;PS;PI;PE;SM;PC;TG;DG</em> )</li>
 <li>
 <strong>Name</strong> the name of the data files coming from LipidSearch. They have to match perfectly with the file names. If you have technical replicates, separate them by a <strong>semicolon “;”</strong> without any space. (for example in the deuterated: <em>ISMix_5ugmL_deuterated_1.txt;ISMix_5ugmL_deuterated_2.txt;ISMix_5ugmL_deuterated_3.txt</em>)</li>
 </ul>
@@ -283,7 +283,7 @@ The column names in the data matrix must follow the same SampleID rules describe
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2022-11-02.</p>
+    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2023-03-15.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

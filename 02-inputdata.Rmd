@@ -146,7 +146,7 @@ In the case of LipidSearch, if you have Internal Standard, you can choose to use
 Next, ADViSELipidomics, requires two Calibration Excel files, one for the Non-labeled and the other for the Deuterated. They share the same structure:
 
 * **Concentration (ng/mL)** the concentration of the standard (numeric)
-* **Class** the lipid classes of interest separated by a comma **,** (e.g. *PG,PS,PI,PE,SM,PC,TG,DG* )
+* **Class** the lipid classes of interest separated by a **semicolon ";"** (e.g. *PG;PS;PI;PE;SM;PC;TG;DG* )
 * **Name** the name of the data files coming from LipidSearch. They have to match perfectly with the file names. If you have technical replicates, separate them by a **semicolon ";"** without any space. (for example in the deuterated: *ISMix_5ugmL_deuterated_1.txt;ISMix_5ugmL_deuterated_2.txt;ISMix_5ugmL_deuterated_3.txt*)
 
 The picture below shows an example of a Calibration Excel file for the deuterated. 
