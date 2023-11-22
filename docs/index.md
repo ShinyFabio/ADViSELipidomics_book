@@ -1,7 +1,7 @@
 --- 
 title: "ADViSELipidomics user manual"
 author: "Fabio Della Rocca"
-date: "2023-03-15"
+date: "2023-11-22"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]

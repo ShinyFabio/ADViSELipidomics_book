@@ -120,14 +120,14 @@
 <h2>
 <span class="header-section-number">3.1</span> Data files (LipidSearch or LIQUID)<a class="anchor" aria-label="anchor" href="#sec21"><i class="fas fa-link"></i></a>
 </h2>
-<p>The output of LipidSearch and LIQUID are some text files containing information on chromatographic peak area or peak intensity per lipid. If your data come from <strong>LipidSearch</strong>, you should have a deuterated file and a non-labeled file for each sample (or replicate). The extension of these files should be .txt. ADViSELIpidomics accepts files from LipidSearch version 4.2.29. If your data come from <strong>LIQUID</strong> you can have a positive and a negative file (with a .tsv extension). In any case, put your data file in a folder and rename each file with your sample id in a proper way.</p>
+<p>The output of LipidSearch and LIQUID are some text files containing information on chromatographic peak area or peak intensity per lipid. If your data come from <strong>LipidSearch</strong>, you should have a deuterated file and a non-labeled file for each sample (or replicate). The extension of these files should be .txt. ADViSELIpidomics accepts files from LipidSearch version 4.2.29 and beyond (last version tested 5.1.6). If your data come from <strong>LIQUID</strong> you can have a positive and a negative file (with a .tsv extension). In any case, put your data file in a folder and rename each file with your sample id in a proper way.</p>
 <p><strong>Example:</strong><br>
-Your sample is called “AF-1CM” and you have two technical replicates. Then, depending on the output software, the name of the data files should be:</p>
+Your sample is called “AF-1C-M” and you have two technical replicates. Then, depending on the output software, the name of the data files should be:</p>
 <ul>
 <li>for LipidSearch: “AF-1C-M_deuterated_1.txt”, “AF-1C-M_nonlabeled_1.txt” and “AF-1C-M_deuterated_2.txt” and “AF-1C-M_nonlabeled_2.txt”</li>
 <li>for LIQUID: “AF-1C-M_positive_1.tsv”, “AF-1C-M_negative_1.tsv” and “AF-1C-M_positive_2.tsv”, “AF-1C-M_negative_2.tsv”</li>
 </ul>
-<p>The last two characters (e.g. “_1”) refer to the technical replicate. If you don not have technical replicates just remove these two last characters (so for example in the case of LipidSearch you should have “AF-1C-M_deuterated.txt” and “AF-1C-M_nonlabeled.txt”).</p>
+<p>The last two characters (e.g. “_1”) refer to the technical replicate. If you do not have technical replicates just remove these two last characters (so for example in the case of LipidSearch you should have “AF-1C-M_deuterated.txt” and “AF-1C-M_nonlabeled.txt”).</p>
 <p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/circle-exclamation.svg" width="15" height="15"><strong>NOTE</strong><br>
 In the choice of your sample name, it’s better to avoid special characters and <strong>DO NOT use underscores (_)</strong> . This character is used by ADViSELipidomics to split the file name into three parts: the sample name, the type of file (deuterated/nonlabeled or positive/negative), and the technical replicate as shown in the following picture:</p>
 <div class="inline-figure"><img src="images/notation_files.png" width="100%"></div>
@@ -283,7 +283,7 @@ The column names in the data matrix must follow the same SampleID rules describe
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2023-03-15.</p>
+    <p>"<strong>ADViSELipidomics user manual</strong>" was written by Fabio Della Rocca. It was last built on 2023-11-22.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
