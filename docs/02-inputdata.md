@@ -54,8 +54,7 @@ The last two characters (e.g. "_1") refer to the technical replicate. If you do 
 <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/circle-exclamation.svg" width="15" height="15"> **NOTE**  
 In the choice of your sample name, it's better to avoid special characters and **DO NOT use underscores (\_)** . This character is used by ADViSELipidomics to split the file name into three parts: the sample name, the type of file (deuterated/nonlabeled or positive/negative), and the technical replicate as shown in the following picture:
 
-
-\includegraphics[width=1\linewidth]{images/notation_files} 
+<img src="images/notation_files.png" width="100%" />
 
 
 For example, a bad name could be "Blood_bag_deuterated_1.txt", while a good name is "Blood-bag_deuterated_1.txt".
@@ -76,8 +75,7 @@ The picture below shows a Target File example where the mandatory columns are en
 If your Target File does not contain at least one informative column about the samples (e.g. Product, Model_type, etc.), you can not perform any exploratory or statistical analysis. 
 
 
-
-\includegraphics[width=1\linewidth]{images/target_file_example} 
+<img src="images/target_file_example.png" width="100%" />
 
 
 
@@ -102,15 +100,13 @@ In LipidSearch and LIQUID option, ADViSELipidomics requires also another Excel f
 \***nomenclature of LipidSearch:** LipidSearch nomenclature is very similar to Lipid Maps nomenclature except for the use of underscore instead of backslash between different stereospecific numbering (sn) and the absence of the double-bond geometry. An example of the required nomenclature can be seen in the picture below.
 
 
-
-\includegraphics[width=1\linewidth]{images/nomenclature} 
+<img src="images/nomenclature.png" width="100%" />
 
 
 The picture below shows an Internal Reference File example in the case of LipidSearch and the presence of Internal Standards. In yellow are the mandatory columns, and in green the columns needed only in the presence of Internal Standards. The "Unit_measure" column is not used but can be helpful to check that each standard concentration has the same unit of measure. If you have different units of measure, convert them to the same.
 
 
-
-\includegraphics[width=1\linewidth]{images/internal_reference_example} 
+<img src="images/internal_reference_example.png" width="100%" />
 
 
 The Internal Reference File example for the LipidSearch with Internal Standards option can be downloaded from here:
@@ -127,8 +123,7 @@ The Internal Reference File example for the LipidSearch with Internal Standards 
 
 The picture below shows an Internal Reference File example in the case of LIQUID. In yellow are the mandatory columns.
 
-
-\includegraphics[width=1\linewidth]{images/int_reference_LIQUID} 
+<img src="images/int_reference_LIQUID.png" width="100%" />
 
 
 The Internal Reference File example for the LIQUID option can be downloaded from here:
@@ -146,8 +141,7 @@ Next, ADViSELipidomics, requires two Calibration Excel files, one for the Non-la
 
 The picture below shows an example of a Calibration Excel file for the deuterated. 
 
-
-\includegraphics[width=1\linewidth]{images/calibration_deut_example} 
+<img src="images/calibration_deut_example.png" width="100%" />
 
 
 An example of the Calibration Deuterated and Calibration Nonlabeled Excel files can be downloaded here:
@@ -162,8 +156,7 @@ An example of the Calibration Deuterated and Calibration Nonlabeled Excel files 
 
 If you already have a  matrix file containing the abundance for each lipid, you need just two Excel files: a Target File and a Data Matrix File. Here the Target File has only one mandatory column, the SampleID. The Data Matrix (.xlsx file) must have the list of the lipids in the first column, which must be called *"Lipids"*, and then the samples (or replicates) in the following columns, with the column names that are the same of the *SampleID* from the Target File. It is not necessary that the matrix is full (i.e. without missing values) since after uploaded, it is possible to filter and impute NAs. The picture below shows an example of a Data Matrix Excel file.
 
-
-\includegraphics[width=1\linewidth]{images/excel_file_example} 
+<img src="images/excel_file_example.png" width="100%" />
 
 
 <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/circle-exclamation.svg" width="15" height="15"> **NOTE** 
